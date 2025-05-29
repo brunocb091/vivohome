@@ -1,0 +1,580 @@
+[2025-03-27 19:51:09] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":4239480,\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-03-27T19:49:57.278Z\",\"approvedDate\":\"2025-03-27T19:51:03.904Z\",\"paidAt\":\"2025-03-27T19:51:03.904Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Carlos Lopes Barbosa\",\"email\":\"carloslopesbarbosa888@outlook.com\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"90663193486\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"18.230.204.39\"},\"items\":[{\"id\":\"PROD_67e5ac2d1cd6a\",\"title\":\"Libera\\u00e7\\u00e3o de Benef\\u00edcio - Placa: LPT1427\",\"quantity\":1,\"unitPrice\":500}],\"amount\":500,\"fee\":{\"fixedAmount\":150,\"netAmount\":325},\"trackingParameters\":[],\"isTest\":false}"
+}
+----------------------------------------
+[2025-03-27 19:51:09] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 4239480,
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27T19:49:57.278Z",
+    "approvedDate": "2025-03-27T19:51:03.904Z",
+    "paidAt": "2025-03-27T19:51:03.904Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Carlos Lopes Barbosa",
+        "email": "carloslopesbarbosa888@outlook.com",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "90663193486",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "18.230.204.39"
+    },
+    "items": [
+        {
+            "id": "PROD_67e5ac2d1cd6a",
+            "title": "Libera\u00e7\u00e3o de Benef\u00edcio - Placa: LPT1427",
+            "quantity": 1,
+            "unitPrice": 500
+        }
+    ],
+    "amount": 500,
+    "fee": {
+        "fixedAmount": 150,
+        "netAmount": 325
+    },
+    "trackingParameters": [],
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 19:51:09] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 4239480,
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27 19:49:57",
+    "approvedDate": "2025-03-27 19:51:03",
+    "refundedAt": null,
+    "customer": {
+        "name": "Carlos Lopes Barbosa",
+        "email": "carloslopesbarbosa888@outlook.com",
+        "phone": null,
+        "document": "90663193486",
+        "country": "BR",
+        "ip": "2a02:4780:13:1234::d8"
+    },
+    "products": [
+        {
+            "id": "PROD_67e5ac2d1cd6a",
+            "name": "Libera\u00e7\u00e3o de Benef\u00edcio - Placa: LPT1427",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 500
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 500,
+        "gatewayFeeInCents": 150,
+        "userCommissionInCents": 325
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 19:51:09] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-03-27 19:51:09] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-03-27 23:09:06] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":4247560,\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-03-27T23:07:48.152Z\",\"approvedDate\":\"2025-03-27T23:09:01.557Z\",\"paidAt\":\"2025-03-27T23:09:01.557Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Matheus Soares Ribeiro\",\"email\":\"matheussoaresribeiro581@yahoo.com.br\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"24134947073\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"18.230.190.56\"},\"items\":[{\"id\":\"PROD_67e5da9249f64\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":6782}],\"amount\":6782,\"fee\":{\"fixedAmount\":150,\"netAmount\":6293},\"trackingParameters\":{\"src\":\"google\",\"sck\":\"googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR\",\"utm_source\":\"google\",\"utm_campaign\":\"22383416570\",\"utm_medium\":\"177604176856\",\"utm_content\":\"742265690804\",\"xcod\":\"googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-03-27 23:09:06] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 4247560,
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27T23:07:48.152Z",
+    "approvedDate": "2025-03-27T23:09:01.557Z",
+    "paidAt": "2025-03-27T23:09:01.557Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Matheus Soares Ribeiro",
+        "email": "matheussoaresribeiro581@yahoo.com.br",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "24134947073",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "18.230.190.56"
+    },
+    "items": [
+        {
+            "id": "PROD_67e5da9249f64",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 6782
+        }
+    ],
+    "amount": 6782,
+    "fee": {
+        "fixedAmount": 150,
+        "netAmount": 6293
+    },
+    "trackingParameters": {
+        "src": "google",
+        "sck": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "utm_source": "google",
+        "utm_campaign": "22383416570",
+        "utm_medium": "177604176856",
+        "utm_content": "742265690804",
+        "xcod": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 23:09:06] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 4247560,
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27 23:07:48",
+    "approvedDate": "2025-03-27 23:09:01",
+    "refundedAt": null,
+    "customer": {
+        "name": "Matheus Soares Ribeiro",
+        "email": "matheussoaresribeiro581@yahoo.com.br",
+        "phone": null,
+        "document": "24134947073",
+        "country": "BR",
+        "ip": "2a02:4780:13:1234::de"
+    },
+    "products": [
+        {
+            "id": "PROD_67e5da9249f64",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "src": "google",
+        "sck": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "utm_source": "google",
+        "utm_campaign": "22383416570",
+        "utm_medium": "177604176856",
+        "utm_content": "742265690804",
+        "utm_term": null,
+        "xcod": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 150,
+        "userCommissionInCents": 6293
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 23:09:06] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-03-27 23:09:06] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-03-27 23:10:56] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":4247660,\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-03-27T23:10:17.184Z\",\"approvedDate\":\"2025-03-27T23:10:51.548Z\",\"paidAt\":\"2025-03-27T23:10:51.548Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Carlos Lima Ribeiro\",\"email\":\"carloslimaribeiro711@hotmail.com\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"80565341804\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"15.228.200.74\"},\"items\":[{\"id\":\"PROD_67e5db003f0c2\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":1753}],\"amount\":1753,\"fee\":{\"fixedAmount\":150,\"netAmount\":1515},\"trackingParameters\":{\"src\":\"googlejLj67e5da4115b9fee92b80e8e9\",\"utm_source\":\"googlejLj67e5da4115b9fee92b80e8e9\",\"utm_campaign\":\"22383416570\",\"utm_medium\":\"177604176856\",\"utm_content\":\"742265690804\",\"xcod\":\"googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-03-27 23:10:56] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 4247660,
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27T23:10:17.184Z",
+    "approvedDate": "2025-03-27T23:10:51.548Z",
+    "paidAt": "2025-03-27T23:10:51.548Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Carlos Lima Ribeiro",
+        "email": "carloslimaribeiro711@hotmail.com",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "80565341804",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "15.228.200.74"
+    },
+    "items": [
+        {
+            "id": "PROD_67e5db003f0c2",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 1753
+        }
+    ],
+    "amount": 1753,
+    "fee": {
+        "fixedAmount": 150,
+        "netAmount": 1515
+    },
+    "trackingParameters": {
+        "src": "googlejLj67e5da4115b9fee92b80e8e9",
+        "utm_source": "googlejLj67e5da4115b9fee92b80e8e9",
+        "utm_campaign": "22383416570",
+        "utm_medium": "177604176856",
+        "utm_content": "742265690804",
+        "xcod": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 23:10:56] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 4247660,
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27 23:10:17",
+    "approvedDate": "2025-03-27 23:10:51",
+    "refundedAt": null,
+    "customer": {
+        "name": "Carlos Lima Ribeiro",
+        "email": "carloslimaribeiro711@hotmail.com",
+        "phone": null,
+        "document": "80565341804",
+        "country": "BR",
+        "ip": "2a02:4780:13:1234::de"
+    },
+    "products": [
+        {
+            "id": "PROD_67e5db003f0c2",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 1753
+        }
+    ],
+    "trackingParameters": {
+        "src": "googlejLj67e5da4115b9fee92b80e8e9",
+        "sck": null,
+        "utm_source": "googlejLj67e5da4115b9fee92b80e8e9",
+        "utm_campaign": "22383416570",
+        "utm_medium": "177604176856",
+        "utm_content": "742265690804",
+        "utm_term": null,
+        "xcod": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 1753,
+        "gatewayFeeInCents": 150,
+        "userCommissionInCents": 1515
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 23:10:56] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-03-27 23:10:56] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-03-27 23:21:16] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":4248039,\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-03-27T23:20:09.570Z\",\"approvedDate\":\"2025-03-27T23:21:11.358Z\",\"paidAt\":\"2025-03-27T23:21:11.358Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Miguel Santos Almeida\",\"email\":\"miguelsantosalmeida90@yahoo.com.br\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"34187581502\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"56.124.23.255\"},\"items\":[{\"id\":\"PROD_67e5dd6c2b621\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":6782}],\"amount\":6782,\"fee\":{\"fixedAmount\":150,\"netAmount\":6293},\"trackingParameters\":{\"src\":\"google\",\"sck\":\"googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR\",\"utm_source\":\"google\",\"utm_campaign\":\"22383416570\",\"utm_medium\":\"177604176856\",\"utm_content\":\"742265690804\",\"xcod\":\"googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-03-27 23:21:16] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 4248039,
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27T23:20:09.570Z",
+    "approvedDate": "2025-03-27T23:21:11.358Z",
+    "paidAt": "2025-03-27T23:21:11.358Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Miguel Santos Almeida",
+        "email": "miguelsantosalmeida90@yahoo.com.br",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "34187581502",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "56.124.23.255"
+    },
+    "items": [
+        {
+            "id": "PROD_67e5dd6c2b621",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 6782
+        }
+    ],
+    "amount": 6782,
+    "fee": {
+        "fixedAmount": 150,
+        "netAmount": 6293
+    },
+    "trackingParameters": {
+        "src": "google",
+        "sck": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "utm_source": "google",
+        "utm_campaign": "22383416570",
+        "utm_medium": "177604176856",
+        "utm_content": "742265690804",
+        "xcod": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 23:21:16] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 4248039,
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27 23:20:09",
+    "approvedDate": "2025-03-27 23:21:11",
+    "refundedAt": null,
+    "customer": {
+        "name": "Miguel Santos Almeida",
+        "email": "miguelsantosalmeida90@yahoo.com.br",
+        "phone": null,
+        "document": "34187581502",
+        "country": "BR",
+        "ip": "2a02:4780:13:1234::de"
+    },
+    "products": [
+        {
+            "id": "PROD_67e5dd6c2b621",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "src": "google",
+        "sck": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "utm_source": "google",
+        "utm_campaign": "22383416570",
+        "utm_medium": "177604176856",
+        "utm_content": "742265690804",
+        "utm_term": null,
+        "xcod": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 150,
+        "userCommissionInCents": 6293
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 23:21:16] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-03-27 23:21:16] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-03-27 23:23:17] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":4248121,\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-03-27T23:22:22.671Z\",\"approvedDate\":\"2025-03-27T23:23:12.387Z\",\"paidAt\":\"2025-03-27T23:23:12.387Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Manuela Lopes Oliveira\",\"email\":\"manuelalopesoliveira109@outlook.com\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"38972668303\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"54.233.38.188\"},\"items\":[{\"id\":\"PROD_67e5dde51c13d\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":1753}],\"amount\":1753,\"fee\":{\"fixedAmount\":150,\"netAmount\":1515},\"trackingParameters\":{\"src\":\"googlejLj67e5dd25b0a48f0fc3960e30\",\"utm_source\":\"googlejLj67e5dd25b0a48f0fc3960e30\",\"utm_campaign\":\"22383416570\",\"utm_medium\":\"177604176856\",\"utm_content\":\"742265690804\",\"xcod\":\"googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-03-27 23:23:17] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 4248121,
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27T23:22:22.671Z",
+    "approvedDate": "2025-03-27T23:23:12.387Z",
+    "paidAt": "2025-03-27T23:23:12.387Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Manuela Lopes Oliveira",
+        "email": "manuelalopesoliveira109@outlook.com",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "38972668303",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "54.233.38.188"
+    },
+    "items": [
+        {
+            "id": "PROD_67e5dde51c13d",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 1753
+        }
+    ],
+    "amount": 1753,
+    "fee": {
+        "fixedAmount": 150,
+        "netAmount": 1515
+    },
+    "trackingParameters": {
+        "src": "googlejLj67e5dd25b0a48f0fc3960e30",
+        "utm_source": "googlejLj67e5dd25b0a48f0fc3960e30",
+        "utm_campaign": "22383416570",
+        "utm_medium": "177604176856",
+        "utm_content": "742265690804",
+        "xcod": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 23:23:17] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 4248121,
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-03-27 23:22:22",
+    "approvedDate": "2025-03-27 23:23:12",
+    "refundedAt": null,
+    "customer": {
+        "name": "Manuela Lopes Oliveira",
+        "email": "manuelalopesoliveira109@outlook.com",
+        "phone": null,
+        "document": "38972668303",
+        "country": "BR",
+        "ip": "2a02:4780:13:1234::de"
+    },
+    "products": [
+        {
+            "id": "PROD_67e5dde51c13d",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 1753
+        }
+    ],
+    "trackingParameters": {
+        "src": "googlejLj67e5dd25b0a48f0fc3960e30",
+        "sck": null,
+        "utm_source": "googlejLj67e5dd25b0a48f0fc3960e30",
+        "utm_campaign": "22383416570",
+        "utm_medium": "177604176856",
+        "utm_content": "742265690804",
+        "utm_term": null,
+        "xcod": "googlehQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 1753,
+        "gatewayFeeInCents": 150,
+        "userCommissionInCents": 1515
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-27 23:23:17] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-03-27 23:23:17] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------

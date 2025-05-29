@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .hero {
+    background: url('images/bg-consultorio.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-overlay {
+    max-width: 650px;
+    margin: auto;
+    background: rgba(0, 0, 128, 0.75);
+    padding: 40px;
+    border-radius: 14px;
+  }
+  
+  .hero h1 {
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .subhead {
+    font-size: 16px;
+    color: #e5e5e5;
+  }
+  

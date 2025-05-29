@@ -1,0 +1,4419 @@
+[2025-05-16 19:28:50] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7520358,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:28:50\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Luiza Fernandes Rodrigues\",\"email\":\"luizafernandesrodrigues873@outlook.com\",\"phone\":null,\"document\":\"84758636559\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_8587\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:28:50] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7520358,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:28:50",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Luiza Fernandes Rodrigues",
+        "email": "luizafernandesrodrigues873@outlook.com",
+        "phone": null,
+        "document": "84758636559",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_8587",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:28:50] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7520358,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:28:50",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Luiza Fernandes Rodrigues",
+        "email": "luizafernandesrodrigues873@outlook.com",
+        "phone": null,
+        "document": "84758636559",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_8587",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:28:50] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:28:51] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:28:51] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:29:16] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7520374,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:29:16\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Isabella Souza Oliveira\",\"email\":\"isabellasouzaoliveira354@gmail.com\",\"phone\":null,\"document\":\"75235902840\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_2472\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6969}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":6969,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6969},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:29:16] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7520374,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:29:16",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Souza Oliveira",
+        "email": "isabellasouzaoliveira354@gmail.com",
+        "phone": null,
+        "document": "75235902840",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_2472",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6969
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 6969,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6969
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:29:16] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7520374,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:29:16",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Souza Oliveira",
+        "email": "isabellasouzaoliveira354@gmail.com",
+        "phone": null,
+        "document": "75235902840",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_2472",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6969
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6969,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6969
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:29:16] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:29:17] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:29:17] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:30:20] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7520403,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:30:20\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Matheus Rodrigues Souza\",\"email\":\"matheusrodriguessouza948@uol.com.br\",\"phone\":null,\"document\":\"71022814559\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_9992\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:30:20] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7520403,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:30:20",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Matheus Rodrigues Souza",
+        "email": "matheusrodriguessouza948@uol.com.br",
+        "phone": null,
+        "document": "71022814559",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_9992",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:30:20] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7520403,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:30:20",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Matheus Rodrigues Souza",
+        "email": "matheusrodriguessouza948@uol.com.br",
+        "phone": null,
+        "document": "71022814559",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_9992",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:30:20] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:30:21] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:30:21] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:32:05] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7520479,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:32:05\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Bernardo Ferreira Almeida\",\"email\":\"bernardoferreiraalmeida529@hotmail.com\",\"phone\":null,\"document\":\"43329713372\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_7422\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:32:05] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7520479,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:32:05",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Bernardo Ferreira Almeida",
+        "email": "bernardoferreiraalmeida529@hotmail.com",
+        "phone": null,
+        "document": "43329713372",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_7422",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:32:05] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7520479,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:32:05",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Bernardo Ferreira Almeida",
+        "email": "bernardoferreiraalmeida529@hotmail.com",
+        "phone": null,
+        "document": "43329713372",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_7422",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:32:05] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:32:05] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:32:05] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:43:25] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7520997,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:43:25\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Sophia Lopes Silva\",\"email\":\"sophialopessilva674@gmail.com\",\"phone\":null,\"document\":\"50741050307\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_9564\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:43:25] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7520997,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:43:25",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Sophia Lopes Silva",
+        "email": "sophialopessilva674@gmail.com",
+        "phone": null,
+        "document": "50741050307",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_9564",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:43:25] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7520997,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:43:25",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Sophia Lopes Silva",
+        "email": "sophialopessilva674@gmail.com",
+        "phone": null,
+        "document": "50741050307",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_9564",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:43:25] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:43:25] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:43:25] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:44:01] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521024,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:44:01\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Isabella Pereira Silva\",\"email\":\"isabellapereirasilva675@uol.com.br\",\"phone\":null,\"document\":\"14323514190\",\"country\":\"BR\",\"ip\":\"2804:d4b:af7c:b700:bcc3:7cd4:f31d:689\"},\"products\":[{\"id\":\"PROD_6857\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:44:01] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521024,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:44:01",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Pereira Silva",
+        "email": "isabellapereirasilva675@uol.com.br",
+        "phone": null,
+        "document": "14323514190",
+        "country": "BR",
+        "ip": "2804:d4b:af7c:b700:bcc3:7cd4:f31d:689"
+    },
+    "products": [
+        {
+            "id": "PROD_6857",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:44:01] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521024,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:44:01",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Pereira Silva",
+        "email": "isabellapereirasilva675@uol.com.br",
+        "phone": null,
+        "document": "14323514190",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_6857",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:44:01] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:44:01] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:44:01] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:44:04] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521028,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:44:04\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Felipe Vieira Ferreira\",\"email\":\"felipevieiraferreira791@yahoo.com.br\",\"phone\":null,\"document\":\"57304129590\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_6467\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:44:04] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521028,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:44:04",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Felipe Vieira Ferreira",
+        "email": "felipevieiraferreira791@yahoo.com.br",
+        "phone": null,
+        "document": "57304129590",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_6467",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:44:04] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521028,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:44:04",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Felipe Vieira Ferreira",
+        "email": "felipevieiraferreira791@yahoo.com.br",
+        "phone": null,
+        "document": "57304129590",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_6467",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:44:04] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:44:06] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:44:06] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:49:34] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521257,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:49:34\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Lucas Oliveira Souza\",\"email\":\"lucasoliveirasouza388@uol.com.br\",\"phone\":null,\"document\":\"48936112244\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_4697\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:49:34] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521257,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:49:34",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Lucas Oliveira Souza",
+        "email": "lucasoliveirasouza388@uol.com.br",
+        "phone": null,
+        "document": "48936112244",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_4697",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:49:34] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521257,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:49:34",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Lucas Oliveira Souza",
+        "email": "lucasoliveirasouza388@uol.com.br",
+        "phone": null,
+        "document": "48936112244",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_4697",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:49:34] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:49:34] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:49:34] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:49:38] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521261,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:49:38\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Matheus Santos Alves\",\"email\":\"matheussantosalves128@outlook.com\",\"phone\":null,\"document\":\"36034523729\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_3598\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:49:38] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521261,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:49:38",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Matheus Santos Alves",
+        "email": "matheussantosalves128@outlook.com",
+        "phone": null,
+        "document": "36034523729",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_3598",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:49:38] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521261,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:49:38",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Matheus Santos Alves",
+        "email": "matheussantosalves128@outlook.com",
+        "phone": null,
+        "document": "36034523729",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_3598",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:49:38] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:49:38] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:49:38] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:51:20] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521329,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:51:20\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Helena Souza Gomes\",\"email\":\"helenasouzagomes382@uol.com.br\",\"phone\":null,\"document\":\"13116688702\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_9216\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:51:20] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521329,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:51:20",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Helena Souza Gomes",
+        "email": "helenasouzagomes382@uol.com.br",
+        "phone": null,
+        "document": "13116688702",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_9216",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:51:20] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521329,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:51:20",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Helena Souza Gomes",
+        "email": "helenasouzagomes382@uol.com.br",
+        "phone": null,
+        "document": "13116688702",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_9216",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:51:20] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:51:21] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:51:21] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:51:31] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521335,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:51:31\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Gabriel Costa Lopes\",\"email\":\"gabrielcostalopes304@uol.com.br\",\"phone\":null,\"document\":\"04017873383\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_1246\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:51:31] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521335,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:51:31",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Costa Lopes",
+        "email": "gabrielcostalopes304@uol.com.br",
+        "phone": null,
+        "document": "04017873383",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_1246",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:51:31] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521335,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:51:31",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Costa Lopes",
+        "email": "gabrielcostalopes304@uol.com.br",
+        "phone": null,
+        "document": "04017873383",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_1246",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:51:31] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:51:31] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 404,
+    "response": {
+        "OK": false,
+        "data": {
+            "type": "API_CREDENTIAL"
+        },
+        "result": "ERROR",
+        "statusCode": 404,
+        "message": "API_CREDENTIAL_NOT_FOUND"
+    }
+}
+----------------------------------------
+[2025-05-16 19:51:31] ❌ Erro
+Dados: {
+    "message": "Erro na API Utmify. HTTP Code: 404"
+}
+----------------------------------------
+[2025-05-16 19:54:00] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521439,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:54:00\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Laura Pereira Souza\",\"email\":\"laurapereirasouza793@yahoo.com.br\",\"phone\":null,\"document\":\"07501003971\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_3962\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:54:00] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521439,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:54:00",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Pereira Souza",
+        "email": "laurapereirasouza793@yahoo.com.br",
+        "phone": null,
+        "document": "07501003971",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_3962",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:54:00] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521439,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:54:00",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Pereira Souza",
+        "email": "laurapereirasouza793@yahoo.com.br",
+        "phone": null,
+        "document": "07501003971",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_3962",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:54:00] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:54:01] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 19:54:03] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521442,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:54:03\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Gabriel Barbosa Martins\",\"email\":\"gabrielbarbosamartins305@gmail.com\",\"phone\":null,\"document\":\"36878228000\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_9818\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:54:03] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521442,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:54:03",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Barbosa Martins",
+        "email": "gabrielbarbosamartins305@gmail.com",
+        "phone": null,
+        "document": "36878228000",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_9818",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:54:03] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521442,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:54:03",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Barbosa Martins",
+        "email": "gabrielbarbosamartins305@gmail.com",
+        "phone": null,
+        "document": "36878228000",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_9818",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:54:03] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:54:04] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 19:54:14] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521452,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 19:54:14\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Julia Martins Ferreira\",\"email\":\"juliamartinsferreira495@outlook.com\",\"phone\":null,\"document\":\"13787371052\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_1024\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 19:54:14] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521452,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:54:14",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Julia Martins Ferreira",
+        "email": "juliamartinsferreira495@outlook.com",
+        "phone": null,
+        "document": "13787371052",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_1024",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:54:14] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521452,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 19:54:14",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Julia Martins Ferreira",
+        "email": "juliamartinsferreira495@outlook.com",
+        "phone": null,
+        "document": "13787371052",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_1024",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 19:54:14] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 19:54:15] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:01:47] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521793,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:01:47\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Manuela Gomes Lima\",\"email\":\"manuelagomeslima906@gmail.com\",\"phone\":null,\"document\":\"90481004882\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_8666\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:01:47] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521793,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:01:47",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Manuela Gomes Lima",
+        "email": "manuelagomeslima906@gmail.com",
+        "phone": null,
+        "document": "90481004882",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_8666",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:01:47] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521793,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:01:47",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Manuela Gomes Lima",
+        "email": "manuelagomeslima906@gmail.com",
+        "phone": null,
+        "document": "90481004882",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_8666",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:01:47] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:01:47] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:01:52] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521799,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:01:52\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Julia Lopes Fernandes\",\"email\":\"julialopesfernandes31@outlook.com\",\"phone\":null,\"document\":\"91039282920\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_2222\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:01:52] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521799,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:01:52",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Julia Lopes Fernandes",
+        "email": "julialopesfernandes31@outlook.com",
+        "phone": null,
+        "document": "91039282920",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_2222",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:01:52] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521799,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:01:52",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Julia Lopes Fernandes",
+        "email": "julialopesfernandes31@outlook.com",
+        "phone": null,
+        "document": "91039282920",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_2222",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:01:52] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:01:52] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:03:10] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7521852,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:03:10\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Alice Oliveira Carvalho\",\"email\":\"aliceoliveiracarvalho704@outlook.com\",\"phone\":null,\"document\":\"05383216600\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_9988\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:03:10] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7521852,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:03:10",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Alice Oliveira Carvalho",
+        "email": "aliceoliveiracarvalho704@outlook.com",
+        "phone": null,
+        "document": "05383216600",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_9988",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:03:10] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7521852,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:03:10",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Alice Oliveira Carvalho",
+        "email": "aliceoliveiracarvalho704@outlook.com",
+        "phone": null,
+        "document": "05383216600",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_9988",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:03:10] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:03:10] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:14:00] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7522322,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:14:00\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Isabella Costa Vieira\",\"email\":\"isabellacostavieira943@gmail.com\",\"phone\":null,\"document\":\"22446259588\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_4494\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:14:00] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7522322,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:00",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Costa Vieira",
+        "email": "isabellacostavieira943@gmail.com",
+        "phone": null,
+        "document": "22446259588",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_4494",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:00] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7522322,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:00",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Costa Vieira",
+        "email": "isabellacostavieira943@gmail.com",
+        "phone": null,
+        "document": "22446259588",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_4494",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:00] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:14:00] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:14:16] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7522338,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:14:16\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Gabriel Santos Oliveira\",\"email\":\"gabrielsantosoliveira744@hotmail.com\",\"phone\":null,\"document\":\"35214441711\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_5868\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:14:16] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7522338,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:16",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Santos Oliveira",
+        "email": "gabrielsantosoliveira744@hotmail.com",
+        "phone": null,
+        "document": "35214441711",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_5868",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:16] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7522338,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:16",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Santos Oliveira",
+        "email": "gabrielsantosoliveira744@hotmail.com",
+        "phone": null,
+        "document": "35214441711",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_5868",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:16] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:14:16] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:14:19] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7522342,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:14:19\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Matheus Ribeiro Costa\",\"email\":\"matheusribeirocosta49@uol.com.br\",\"phone\":null,\"document\":\"63171851156\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_1585\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:14:19] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7522342,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:19",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Matheus Ribeiro Costa",
+        "email": "matheusribeirocosta49@uol.com.br",
+        "phone": null,
+        "document": "63171851156",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_1585",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:19] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7522342,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:19",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Matheus Ribeiro Costa",
+        "email": "matheusribeirocosta49@uol.com.br",
+        "phone": null,
+        "document": "63171851156",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_1585",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:19] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:14:19] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:14:21] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7522343,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:14:21\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Manuela Gomes Souza\",\"email\":\"manuelagomessouza45@yahoo.com.br\",\"phone\":null,\"document\":\"87457934090\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_3046\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:14:21] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7522343,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:21",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Manuela Gomes Souza",
+        "email": "manuelagomessouza45@yahoo.com.br",
+        "phone": null,
+        "document": "87457934090",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_3046",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:21] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7522343,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:21",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Manuela Gomes Souza",
+        "email": "manuelagomessouza45@yahoo.com.br",
+        "phone": null,
+        "document": "87457934090",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_3046",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:21] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:14:21] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:14:59] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7522365,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:14:59\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Felipe Santos Martins\",\"email\":\"felipesantosmartins654@outlook.com\",\"phone\":null,\"document\":\"32022472713\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_6677\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:14:59] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7522365,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:59",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Felipe Santos Martins",
+        "email": "felipesantosmartins654@outlook.com",
+        "phone": null,
+        "document": "32022472713",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_6677",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:59] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7522365,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:14:59",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Felipe Santos Martins",
+        "email": "felipesantosmartins654@outlook.com",
+        "phone": null,
+        "document": "32022472713",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_6677",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:14:59] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:14:59] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:15:24] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7522388,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:15:24\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Thiago Vieira Pereira\",\"email\":\"thiagovieirapereira483@outlook.com\",\"phone\":null,\"document\":\"19884581533\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_5365\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:15:24] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7522388,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:15:24",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Thiago Vieira Pereira",
+        "email": "thiagovieirapereira483@outlook.com",
+        "phone": null,
+        "document": "19884581533",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_5365",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:15:24] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7522388,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:15:24",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Thiago Vieira Pereira",
+        "email": "thiagovieirapereira483@outlook.com",
+        "phone": null,
+        "document": "19884581533",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_5365",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:15:24] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:15:24] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:15:32] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7522394,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:15:32\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Miguel Silva Vieira\",\"email\":\"miguelsilvavieira610@uol.com.br\",\"phone\":null,\"document\":\"09118587259\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_9539\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:15:32] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7522394,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:15:32",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Miguel Silva Vieira",
+        "email": "miguelsilvavieira610@uol.com.br",
+        "phone": null,
+        "document": "09118587259",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_9539",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:15:32] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7522394,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:15:32",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Miguel Silva Vieira",
+        "email": "miguelsilvavieira610@uol.com.br",
+        "phone": null,
+        "document": "09118587259",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_9539",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:15:32] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:15:32] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:32:15] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7523150,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:32:15\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Lucas Vieira Santos\",\"email\":\"lucasvieirasantos601@yahoo.com.br\",\"phone\":null,\"document\":\"40710699883\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_4468\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:32:15] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7523150,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:32:15",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Lucas Vieira Santos",
+        "email": "lucasvieirasantos601@yahoo.com.br",
+        "phone": null,
+        "document": "40710699883",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_4468",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:32:15] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7523150,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:32:15",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Lucas Vieira Santos",
+        "email": "lucasvieirasantos601@yahoo.com.br",
+        "phone": null,
+        "document": "40710699883",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_4468",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:32:15] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:32:15] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:43:54] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7523698,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:43:54\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Laura Ribeiro Ribeiro\",\"email\":\"lauraribeiroribeiro100@uol.com.br\",\"phone\":null,\"document\":\"84602837638\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_6693\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:43:54] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7523698,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:43:54",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Ribeiro Ribeiro",
+        "email": "lauraribeiroribeiro100@uol.com.br",
+        "phone": null,
+        "document": "84602837638",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_6693",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:43:54] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7523698,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:43:54",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Ribeiro Ribeiro",
+        "email": "lauraribeiroribeiro100@uol.com.br",
+        "phone": null,
+        "document": "84602837638",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_6693",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:43:54] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:43:54] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:44:09] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7523713,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:44:09\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Julia Oliveira Soares\",\"email\":\"juliaoliveirasoares126@yahoo.com.br\",\"phone\":null,\"document\":\"18532137644\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_8765\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:44:09] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7523713,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:44:09",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Julia Oliveira Soares",
+        "email": "juliaoliveirasoares126@yahoo.com.br",
+        "phone": null,
+        "document": "18532137644",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_8765",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:44:09] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7523713,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:44:09",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Julia Oliveira Soares",
+        "email": "juliaoliveirasoares126@yahoo.com.br",
+        "phone": null,
+        "document": "18532137644",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_8765",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:44:09] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:44:09] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:44:14] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7523718,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:44:14\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Isabella Barbosa Fernandes\",\"email\":\"isabellabarbosafernandes939@hotmail.com\",\"phone\":null,\"document\":\"29706094369\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_3612\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:44:14] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7523718,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:44:14",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Barbosa Fernandes",
+        "email": "isabellabarbosafernandes939@hotmail.com",
+        "phone": null,
+        "document": "29706094369",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_3612",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:44:14] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7523718,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:44:14",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Barbosa Fernandes",
+        "email": "isabellabarbosafernandes939@hotmail.com",
+        "phone": null,
+        "document": "29706094369",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_3612",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:44:14] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:44:14] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:45:17] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7523765,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:45:17\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Laura Ribeiro Ferreira\",\"email\":\"lauraribeiroferreira567@outlook.com\",\"phone\":null,\"document\":\"41176127195\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_7730\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:45:17] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7523765,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:45:17",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Ribeiro Ferreira",
+        "email": "lauraribeiroferreira567@outlook.com",
+        "phone": null,
+        "document": "41176127195",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_7730",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:45:17] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7523765,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:45:17",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Ribeiro Ferreira",
+        "email": "lauraribeiroferreira567@outlook.com",
+        "phone": null,
+        "document": "41176127195",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_7730",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:45:17] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:45:17] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:45:20] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7523768,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:45:20\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Clara Alves Silva\",\"email\":\"claraalvessilva604@gmail.com\",\"phone\":null,\"document\":\"41893590410\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_8877\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:45:20] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7523768,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:45:20",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Clara Alves Silva",
+        "email": "claraalvessilva604@gmail.com",
+        "phone": null,
+        "document": "41893590410",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_8877",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:45:20] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7523768,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:45:20",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Clara Alves Silva",
+        "email": "claraalvessilva604@gmail.com",
+        "phone": null,
+        "document": "41893590410",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_8877",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:45:20] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:45:20] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:47:03] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7523840,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:47:03\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Valentina Ferreira Ribeiro\",\"email\":\"valentinaferreiraribeiro299@hotmail.com\",\"phone\":null,\"document\":\"10380991969\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_3081\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:47:03] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7523840,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:47:03",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Valentina Ferreira Ribeiro",
+        "email": "valentinaferreiraribeiro299@hotmail.com",
+        "phone": null,
+        "document": "10380991969",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_3081",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:47:03] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7523840,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:47:03",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Valentina Ferreira Ribeiro",
+        "email": "valentinaferreiraribeiro299@hotmail.com",
+        "phone": null,
+        "document": "10380991969",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_3081",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:47:03] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:47:03] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:49:17] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7523923,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:49:17\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Jo\\u00e3o Carvalho Pereira\",\"email\":\"joaocarvalhopereira979@uol.com.br\",\"phone\":null,\"document\":\"57704131400\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_9097\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":2790}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":2790,\"gatewayFeeInCents\":0,\"userCommissionInCents\":2790},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:49:17] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7523923,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:49:17",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Jo\u00e3o Carvalho Pereira",
+        "email": "joaocarvalhopereira979@uol.com.br",
+        "phone": null,
+        "document": "57704131400",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_9097",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:49:17] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7523923,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:49:17",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Jo\u00e3o Carvalho Pereira",
+        "email": "joaocarvalhopereira979@uol.com.br",
+        "phone": null,
+        "document": "57704131400",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_9097",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 2790
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 2790,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 2790
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:49:17] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:49:17] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:57:17] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7524215,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:57:17\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Mariana Silva Alves\",\"email\":\"marianasilvaalves875@hotmail.com\",\"phone\":null,\"document\":\"32081275295\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_9060\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6783}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":6783,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6783},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:57:17] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7524215,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:57:17",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Mariana Silva Alves",
+        "email": "marianasilvaalves875@hotmail.com",
+        "phone": null,
+        "document": "32081275295",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_9060",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:57:17] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7524215,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:57:17",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Mariana Silva Alves",
+        "email": "marianasilvaalves875@hotmail.com",
+        "phone": null,
+        "document": "32081275295",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_9060",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:57:17] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:57:17] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 20:57:50] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7524239,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 20:57:50\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Gustavo Silva Oliveira\",\"email\":\"gustavosilvaoliveira763@outlook.com\",\"phone\":null,\"document\":\"80961467428\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_5050\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6783}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":6783,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6783},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 20:57:50] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7524239,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:57:50",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gustavo Silva Oliveira",
+        "email": "gustavosilvaoliveira763@outlook.com",
+        "phone": null,
+        "document": "80961467428",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_5050",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:57:50] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7524239,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 20:57:50",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gustavo Silva Oliveira",
+        "email": "gustavosilvaoliveira763@outlook.com",
+        "phone": null,
+        "document": "80961467428",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_5050",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 20:57:50] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 20:57:50] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 21:33:28] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7525595,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 21:33:27\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Gustavo Silva Martins\",\"email\":\"gustavosilvamartins834@yahoo.com.br\",\"phone\":null,\"document\":\"83300561710\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_4753\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6783}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":6783,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6783},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 21:33:28] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7525595,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:33:27",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gustavo Silva Martins",
+        "email": "gustavosilvamartins834@yahoo.com.br",
+        "phone": null,
+        "document": "83300561710",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_4753",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:33:28] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7525595,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:33:28",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gustavo Silva Martins",
+        "email": "gustavosilvamartins834@yahoo.com.br",
+        "phone": null,
+        "document": "83300561710",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_4753",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:33:28] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 21:33:28] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 21:38:40] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7525777,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 21:38:40\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Isabella Costa Fernandes\",\"email\":\"isabellacostafernandes460@gmail.com\",\"phone\":null,\"document\":\"48242775583\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_5302\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6783}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":6783,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6783},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 21:38:40] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7525777,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:38:40",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Costa Fernandes",
+        "email": "isabellacostafernandes460@gmail.com",
+        "phone": null,
+        "document": "48242775583",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_5302",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:38:40] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7525777,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:38:40",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Isabella Costa Fernandes",
+        "email": "isabellacostafernandes460@gmail.com",
+        "phone": null,
+        "document": "48242775583",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_5302",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:38:40] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 21:38:40] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 21:38:56] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7525791,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 21:38:56\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Gabriel Soares Barbosa\",\"email\":\"gabrielsoaresbarbosa902@hotmail.com\",\"phone\":null,\"document\":\"38281306408\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_9653\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6783}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":6783,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6783},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 21:38:56] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7525791,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:38:56",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Soares Barbosa",
+        "email": "gabrielsoaresbarbosa902@hotmail.com",
+        "phone": null,
+        "document": "38281306408",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_9653",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:38:56] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7525791,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:38:56",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Soares Barbosa",
+        "email": "gabrielsoaresbarbosa902@hotmail.com",
+        "phone": null,
+        "document": "38281306408",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_9653",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:38:56] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 21:38:56] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 21:43:15] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7526000,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 21:43:15\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Luiza Souza Barbosa\",\"email\":\"luizasouzabarbosa54@hotmail.com\",\"phone\":null,\"document\":\"19868960487\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_4700\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6783}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":6783,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6783},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 21:43:15] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7526000,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:43:15",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Luiza Souza Barbosa",
+        "email": "luizasouzabarbosa54@hotmail.com",
+        "phone": null,
+        "document": "19868960487",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_4700",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:43:15] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7526000,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:43:15",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Luiza Souza Barbosa",
+        "email": "luizasouzabarbosa54@hotmail.com",
+        "phone": null,
+        "document": "19868960487",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_4700",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:43:15] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 21:43:15] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 21:47:43] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7526204,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 21:47:43\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Sofia Fernandes Soares\",\"email\":\"sofiafernandessoares270@outlook.com\",\"phone\":null,\"document\":\"21992110883\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_2841\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6783}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":6783,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6783},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 21:47:43] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7526204,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:47:43",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Sofia Fernandes Soares",
+        "email": "sofiafernandessoares270@outlook.com",
+        "phone": null,
+        "document": "21992110883",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_2841",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:47:43] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7526204,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 21:47:43",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Sofia Fernandes Soares",
+        "email": "sofiafernandessoares270@outlook.com",
+        "phone": null,
+        "document": "21992110883",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_2841",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 21:47:43] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 21:47:43] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-16 23:14:14] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7530101,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-16 23:14:14\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Laura Martins Pereira\",\"email\":\"lauramartinspereira832@hotmail.com\",\"phone\":null,\"document\":\"80421173882\",\"country\":\"BR\",\"ip\":\"143.255.220.210\"},\"products\":[{\"id\":\"PROD_3462\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6783}],\"trackingParameters\":[],\"commission\":{\"totalPriceInCents\":6783,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6783},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-16 23:14:14] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7530101,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 23:14:14",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Martins Pereira",
+        "email": "lauramartinspereira832@hotmail.com",
+        "phone": null,
+        "document": "80421173882",
+        "country": "BR",
+        "ip": "143.255.220.210"
+    },
+    "products": [
+        {
+            "id": "PROD_3462",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": [],
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 23:14:14] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7530101,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-16 23:14:14",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Martins Pereira",
+        "email": "lauramartinspereira832@hotmail.com",
+        "phone": null,
+        "document": "80421173882",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_3462",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6783
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": null,
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6783,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6783
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-16 23:14:14] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-16 23:14:14] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------

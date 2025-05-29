@@ -1,0 +1,115 @@
+[2025-04-15 03:43:42] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":\"5104755\",\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-04-15T03:42:44.870Z\",\"approvedDate\":\"2025-04-15T03:43:37.550Z\",\"paidAt\":\"2025-04-15T03:43:37.550Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Gabriel Barbosa Martins\",\"email\":\"gabrielbarbosamartins618@yahoo.com.br\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"33315675902\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"15.229.215.178\"},\"items\":[{\"id\":\"PROD_67fdd5eeaa765\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":500}],\"amount\":500,\"fee\":{\"fixedAmount\":149,\"netAmount\":326},\"trackingParameters\":{\"src\":\"organicjLj67fdd0dfa1b8da32f631835f\",\"sck\":\"organicjLj67fdd0dfa1b8da32f631835fhQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR\",\"utm_source\":\"organicjLj67fdd0dfa1b8da32f631835f\",\"xcod\":\"organicjLj67fdd0dfa1b8da32f631835fhQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-04-15 03:43:42] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": "5104755",
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-04-15T03:42:44.870Z",
+    "approvedDate": "2025-04-15T03:43:37.550Z",
+    "paidAt": "2025-04-15T03:43:37.550Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Barbosa Martins",
+        "email": "gabrielbarbosamartins618@yahoo.com.br",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "33315675902",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "15.229.215.178"
+    },
+    "items": [
+        {
+            "id": "PROD_67fdd5eeaa765",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 500
+        }
+    ],
+    "amount": 500,
+    "fee": {
+        "fixedAmount": 149,
+        "netAmount": 326
+    },
+    "trackingParameters": {
+        "src": "organicjLj67fdd0dfa1b8da32f631835f",
+        "sck": "organicjLj67fdd0dfa1b8da32f631835fhQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR",
+        "utm_source": "organicjLj67fdd0dfa1b8da32f631835f",
+        "xcod": "organicjLj67fdd0dfa1b8da32f631835fhQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-04-15 03:43:42] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": "5104755",
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-04-15 03:42:44",
+    "approvedDate": "2025-04-15 03:43:37",
+    "refundedAt": null,
+    "customer": {
+        "name": "Gabriel Barbosa Martins",
+        "email": "gabrielbarbosamartins618@yahoo.com.br",
+        "phone": null,
+        "document": "33315675902",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_67fdd5eeaa765",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 500
+        }
+    ],
+    "trackingParameters": {
+        "src": "organicjLj67fdd0dfa1b8da32f631835f",
+        "sck": "organicjLj67fdd0dfa1b8da32f631835fhQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR",
+        "utm_source": "organicjLj67fdd0dfa1b8da32f631835f",
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": "organicjLj67fdd0dfa1b8da32f631835fhQwK21wXxRhQwK21wXxRhQwK21wXxRhQwK21wXxR",
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 500,
+        "gatewayFeeInCents": 149,
+        "userCommissionInCents": 326
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-04-15 03:43:42] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-04-15 03:43:42] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------

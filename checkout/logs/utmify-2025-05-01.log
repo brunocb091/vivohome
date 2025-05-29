@@ -1,0 +1,113 @@
+[2025-05-01 23:43:18] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":\"6217778\",\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-05-01T23:39:40.664Z\",\"approvedDate\":\"2025-05-01T23:43:13.062Z\",\"paidAt\":\"2025-05-01T23:43:13.062Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Laura Souza Gomes\",\"email\":\"laurasouzagomes15@gmail.com\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"66160396170\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"15.228.242.99\"},\"items\":[{\"id\":\"PROD_6814071631802\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":6782}],\"amount\":6782,\"fee\":{\"fixedAmount\":200,\"netAmount\":6243},\"trackingParameters\":{\"src\":\"organic\",\"utm_source\":\"organic\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-01 23:43:18] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": "6217778",
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-01T23:39:40.664Z",
+    "approvedDate": "2025-05-01T23:43:13.062Z",
+    "paidAt": "2025-05-01T23:43:13.062Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Souza Gomes",
+        "email": "laurasouzagomes15@gmail.com",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "66160396170",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "15.228.242.99"
+    },
+    "items": [
+        {
+            "id": "PROD_6814071631802",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 6782
+        }
+    ],
+    "amount": 6782,
+    "fee": {
+        "fixedAmount": 200,
+        "netAmount": 6243
+    },
+    "trackingParameters": {
+        "src": "organic",
+        "utm_source": "organic"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-01 23:43:18] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": "6217778",
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-01 23:39:40",
+    "approvedDate": "2025-05-01 23:43:13",
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Souza Gomes",
+        "email": "laurasouzagomes15@gmail.com",
+        "phone": null,
+        "document": "66160396170",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_6814071631802",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "src": "organic",
+        "sck": null,
+        "utm_source": "organic",
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 200,
+        "userCommissionInCents": 6243
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-01 23:43:18] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-01 23:43:18] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------

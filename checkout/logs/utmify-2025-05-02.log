@@ -1,0 +1,452 @@
+[2025-05-02 00:08:46] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":\"6219453\",\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-05-02T00:05:30.482Z\",\"approvedDate\":\"2025-05-02T00:08:41.062Z\",\"paidAt\":\"2025-05-02T00:08:41.062Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Jo\\u00e3o Ferreira Lima\",\"email\":\"joaoferreiralima91@hotmail.com\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"01681154846\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"54.207.135.40\"},\"items\":[{\"id\":\"PROD_68140d0e35d8c\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":6782}],\"amount\":6782,\"fee\":{\"fixedAmount\":200,\"netAmount\":6243},\"trackingParameters\":{\"src\":\"organic\",\"utm_source\":\"organic\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-02 00:08:46] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": "6219453",
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-02T00:05:30.482Z",
+    "approvedDate": "2025-05-02T00:08:41.062Z",
+    "paidAt": "2025-05-02T00:08:41.062Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Jo\u00e3o Ferreira Lima",
+        "email": "joaoferreiralima91@hotmail.com",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "01681154846",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "54.207.135.40"
+    },
+    "items": [
+        {
+            "id": "PROD_68140d0e35d8c",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 6782
+        }
+    ],
+    "amount": 6782,
+    "fee": {
+        "fixedAmount": 200,
+        "netAmount": 6243
+    },
+    "trackingParameters": {
+        "src": "organic",
+        "utm_source": "organic"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-02 00:08:46] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": "6219453",
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-02 00:05:30",
+    "approvedDate": "2025-05-02 00:08:41",
+    "refundedAt": null,
+    "customer": {
+        "name": "Jo\u00e3o Ferreira Lima",
+        "email": "joaoferreiralima91@hotmail.com",
+        "phone": null,
+        "document": "01681154846",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_68140d0e35d8c",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "src": "organic",
+        "sck": null,
+        "utm_source": "organic",
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 200,
+        "userCommissionInCents": 6243
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-02 00:08:46] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-02 00:08:46] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-02 10:12:20] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":\"6235697\",\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-05-02T10:06:17.997Z\",\"approvedDate\":\"2025-05-02T10:12:15.259Z\",\"paidAt\":\"2025-05-02T10:12:15.259Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Clara Costa Oliveira\",\"email\":\"claracostaoliveira98@gmail.com\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"44654320547\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"18.230.197.23\"},\"items\":[{\"id\":\"PROD_68149a8476df6\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":6782}],\"amount\":6782,\"fee\":{\"fixedAmount\":200,\"netAmount\":6311},\"trackingParameters\":{\"src\":\"organic\",\"utm_source\":\"organic\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-02 10:12:20] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": "6235697",
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-02T10:06:17.997Z",
+    "approvedDate": "2025-05-02T10:12:15.259Z",
+    "paidAt": "2025-05-02T10:12:15.259Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Clara Costa Oliveira",
+        "email": "claracostaoliveira98@gmail.com",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "44654320547",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "18.230.197.23"
+    },
+    "items": [
+        {
+            "id": "PROD_68149a8476df6",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 6782
+        }
+    ],
+    "amount": 6782,
+    "fee": {
+        "fixedAmount": 200,
+        "netAmount": 6311
+    },
+    "trackingParameters": {
+        "src": "organic",
+        "utm_source": "organic"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-02 10:12:20] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": "6235697",
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-02 10:06:17",
+    "approvedDate": "2025-05-02 10:12:15",
+    "refundedAt": null,
+    "customer": {
+        "name": "Clara Costa Oliveira",
+        "email": "claracostaoliveira98@gmail.com",
+        "phone": null,
+        "document": "44654320547",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_68149a8476df6",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "src": "organic",
+        "sck": null,
+        "utm_source": "organic",
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 200,
+        "userCommissionInCents": 6311
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-02 10:12:20] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-02 10:12:20] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-02 14:36:47] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":\"6250771\",\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-05-02T14:35:30.930Z\",\"approvedDate\":\"2025-05-02T14:36:42.563Z\",\"paidAt\":\"2025-05-02T14:36:42.563Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Helena Fernandes Almeida\",\"email\":\"helenafernandesalmeida180@uol.com.br\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"52890799042\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"15.229.7.55\"},\"items\":[{\"id\":\"PROD_6814d87fb9002\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":6782}],\"amount\":6782,\"fee\":{\"fixedAmount\":200,\"netAmount\":6311},\"trackingParameters\":{\"src\":\"organic\",\"utm_source\":\"organic\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-02 14:36:47] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": "6250771",
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-02T14:35:30.930Z",
+    "approvedDate": "2025-05-02T14:36:42.563Z",
+    "paidAt": "2025-05-02T14:36:42.563Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Helena Fernandes Almeida",
+        "email": "helenafernandesalmeida180@uol.com.br",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "52890799042",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "15.229.7.55"
+    },
+    "items": [
+        {
+            "id": "PROD_6814d87fb9002",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 6782
+        }
+    ],
+    "amount": 6782,
+    "fee": {
+        "fixedAmount": 200,
+        "netAmount": 6311
+    },
+    "trackingParameters": {
+        "src": "organic",
+        "utm_source": "organic"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-02 14:36:47] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": "6250771",
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-02 14:35:30",
+    "approvedDate": "2025-05-02 14:36:42",
+    "refundedAt": null,
+    "customer": {
+        "name": "Helena Fernandes Almeida",
+        "email": "helenafernandesalmeida180@uol.com.br",
+        "phone": null,
+        "document": "52890799042",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_6814d87fb9002",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "src": "organic",
+        "sck": null,
+        "utm_source": "organic",
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 200,
+        "userCommissionInCents": 6311
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-02 14:36:47] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-02 14:36:48] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------
+[2025-05-02 19:17:54] 📥 Dados recebidos do PayHubr
+Dados: {
+    "raw": "{\"orderId\":\"6310903\",\"platform\":\"Skalepay\",\"paymentMethod\":\"pix\",\"status\":\"paid\",\"createdAt\":\"2025-05-02T19:16:07.348Z\",\"approvedDate\":\"2025-05-02T19:17:49.417Z\",\"paidAt\":\"2025-05-02T19:17:49.417Z\",\"refundedAt\":null,\"customer\":{\"name\":\"Alice Almeida Martins\",\"email\":\"alicealmeidamartins610@gmail.com\",\"phone\":\"(11) 99999-9999\",\"document\":{\"number\":\"51635382173\",\"type\":\"CPF\"},\"country\":\"BR\",\"ip\":\"15.228.96.67\"},\"items\":[{\"id\":\"PROD_68151a6286060\",\"title\":\"produto \",\"quantity\":1,\"unitPrice\":6782}],\"amount\":6782,\"fee\":{\"fixedAmount\":200,\"netAmount\":6311},\"trackingParameters\":{\"src\":\"organic\",\"utm_source\":\"organic\"},\"isTest\":false}"
+}
+----------------------------------------
+[2025-05-02 19:17:54] 🔄 Processando dados recebidos
+Dados: {
+    "orderId": "6310903",
+    "platform": "Skalepay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-02T19:16:07.348Z",
+    "approvedDate": "2025-05-02T19:17:49.417Z",
+    "paidAt": "2025-05-02T19:17:49.417Z",
+    "refundedAt": null,
+    "customer": {
+        "name": "Alice Almeida Martins",
+        "email": "alicealmeidamartins610@gmail.com",
+        "phone": "(11) 99999-9999",
+        "document": {
+            "number": "51635382173",
+            "type": "CPF"
+        },
+        "country": "BR",
+        "ip": "15.228.96.67"
+    },
+    "items": [
+        {
+            "id": "PROD_68151a6286060",
+            "title": "produto ",
+            "quantity": 1,
+            "unitPrice": 6782
+        }
+    ],
+    "amount": 6782,
+    "fee": {
+        "fixedAmount": 200,
+        "netAmount": 6311
+    },
+    "trackingParameters": {
+        "src": "organic",
+        "utm_source": "organic"
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-02 19:17:54] 📤 Dados formatados para Utmify
+Dados: {
+    "orderId": "6310903",
+    "platform": "SkalePay",
+    "paymentMethod": "pix",
+    "status": "paid",
+    "createdAt": "2025-05-02 19:16:07",
+    "approvedDate": "2025-05-02 19:17:49",
+    "refundedAt": null,
+    "customer": {
+        "name": "Alice Almeida Martins",
+        "email": "alicealmeidamartins610@gmail.com",
+        "phone": null,
+        "document": "51635382173",
+        "country": "BR",
+        "ip": "2a02:4780:13::2a"
+    },
+    "products": [
+        {
+            "id": "PROD_68151a6286060",
+            "name": "produto ",
+            "planId": null,
+            "planName": null,
+            "quantity": 1,
+            "priceInCents": 6782
+        }
+    ],
+    "trackingParameters": {
+        "src": "organic",
+        "sck": null,
+        "utm_source": "organic",
+        "utm_campaign": null,
+        "utm_medium": null,
+        "utm_content": null,
+        "utm_term": null,
+        "xcod": null,
+        "fbclid": null,
+        "gclid": null,
+        "ttclid": null
+    },
+    "commission": {
+        "totalPriceInCents": 6782,
+        "gatewayFeeInCents": 200,
+        "userCommissionInCents": 6311
+    },
+    "isTest": false
+}
+----------------------------------------
+[2025-05-02 19:17:54] 📡 Enviando requisição para Utmify
+Dados: {
+    "url": "https:\/\/api.utmify.com.br\/api-credentials\/orders",
+    "headers": [
+        "Content-Type: application\/json",
+        "x-api-token: [REDACTED]"
+    ]
+}
+----------------------------------------
+[2025-05-02 19:17:54] ✅ Resposta da API Utmify
+Dados: {
+    "http_code": 200,
+    "response": {
+        "OK": true,
+        "data": [],
+        "result": "SUCCESS"
+    }
+}
+----------------------------------------

